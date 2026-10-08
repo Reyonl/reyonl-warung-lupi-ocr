@@ -1,0 +1,15 @@
+{
+  "image": "IMG_20261008_115733.jpg",
+  "status": "error",
+  "confidence": 0.0,
+  "time": 100.93,
+  "date_correct": false,
+  "customer_correct": false,
+  "product_correct": false,
+  "regions_count": 0,
+  "raw_text": "",
+  "regions": [],
+  "warnings": [
+    "Gemini Vision error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  ]
+}

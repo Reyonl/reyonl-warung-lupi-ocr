@@ -1,0 +1,30 @@
+{
+  "image": "IMG_20261008_115733.jpg",
+  "engine": "gemini-vision-gemini-3.8-flash",
+  "status": "error",
+  "confidence": 0.0,
+  "time_seconds": 103.6,
+  "regions_count": 0,
+  "raw_text": "",
+  "regions": [],
+  "warnings": [
+    "Gemini Vision error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+  ],
+  "comparison": {
+    "tesseract": {
+      "date": false,
+      "product": "Madu (partial)",
+      "time": "2.9s"
+    },
+    "gemini_vision": {
+      "date": true,
+      "products": [
+        "madu",
+        "rokok",
+        "kopi",
+        "aqua"
+      ],
+      "time": "104s"
+    }
+  }
+}
