@@ -1,0 +1,31 @@
+{
+  "image": "IMG_20261008_115737.jpg",
+  "date": "2026-10-08",
+  "customer": null,
+  "lines": [
+    ".",
+    "1 M4. Park, 4x Kake 5 GI MAL 4 kaki WA Mou. .2 AA )",
+    "Suca | L",
+    "5 1G Ikfenu gs Tjucuk 4 TEA 4 mia aya naa MP. v LUSA |",
+    "— MEA Gue - An Kd Satu Colueh - j",
+    "———— BEA Tnhus G5 Abe, Ep 1 tele LG 23: Budha II",
+    "u Jap ie EGa TN are Caneetk AAA Naud 1 NO Pi",
+    "—— Mesmgos sk Kurama Sk :",
+    "B |eimagasar lapis Sk AA SURA PMA) Le Me Aa aa",
+    ". Ba L nada : katy at",
+    "2 Sama aa an",
+    "B I5o mma ba Ie Ay Su PETA",
+    "T Hi: MG U Tam : berga. PU p4 uga KA",
+    "“2: Iu Auug 5 Awak MA Ad 1 ia"
+  ],
+  "items": [
+    {
+      "product": "TEH",
+      "qty": 1,
+      "unit_price": 4000,
+      "struck": false
+    }
+  ],
+  "notes": "EasyOCR detected: kamis, Sore, Bon, Rama, madu, 4, 3, 2, 10",
+  "source": "draft_from_ocr_analysis_needs_verification"
+}

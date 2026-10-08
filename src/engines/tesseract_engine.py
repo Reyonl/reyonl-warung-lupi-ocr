@@ -150,13 +150,15 @@ class TesseractEngine(EngineInterface):
         if os.path.isdir(local_tessdata):
             os.environ["TESSDATA_PREFIX"] = local_tessdata
 
-        # Tesseract configs optimized for handwriting
+        # Tesseract configs optimized for handwritten notebook OCR
+        # Based on ablation testing: --oem 1 (LSTM) + --psm 6 (block)
+        # is most accurate for notebook handwriting with sparse text
         bl = "|<>[]{}"
         configs = [
-            ("psm6_oem3", f"--psm 6 --oem 3 -c tessedit_char_blacklist={bl}"),
-            ("psm4_oem3", f"--psm 4 --oem 3 -c tessedit_char_blacklist={bl}"),
-            ("psm11_oem3", "--psm 11 --oem 3"),
-            ("psm7_oem3", "--psm 7 --oem 3"),
+            ("psm6_oem1", f"--psm 6 --oem 1 -c tessedit_char_blacklist={bl}"),
+            ("psm4_oem1", f"--psm 4 --oem 1 -c tessedit_char_blacklist={bl}"),
+            ("psm11_oem1", f"--psm 11 --oem 1 -c tessedit_char_blacklist={bl}"),
+            ("psm6_oem3", f"--psm 6 --oem 3 -c tessedit_char_blacklist={bl}"),  # legacy fallback
         ]
 
         best_result: Optional[ScanResult] = None

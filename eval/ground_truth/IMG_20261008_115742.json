@@ -1,0 +1,25 @@
+{
+  "image": "IMG_20261008_115742.jpg",
+  "date": "2026-10-08",
+  "customer": null,
+  "lines": [
+    "P | Aa",
+    "BnAai al 1 ane An pe nAnG  A Gu —",
+    "DN Down EU CAS Jun Dane ak v -|e3) Hp :",
+    "Ia JPU sok",
+    "MEA 1. Sa Ka Mp Ddome If 4 Makan andi 8 reg B'",
+    "JEDA. TN. 5 Gr BM",
+    "Deo Dm Mita 3 Beri— )",
+    "Mk ii ia |) i"
+  ],
+  "items": [
+    {
+      "product": "Makan",
+      "qty": 1,
+      "unit_price": 10000,
+      "struck": false
+    }
+  ],
+  "notes": "EasyOCR detected: Makan, Donat, 20, 2, 42, 28",
+  "source": "draft_from_ocr_analysis_needs_verification"
+}

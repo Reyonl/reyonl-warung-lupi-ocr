@@ -1,0 +1,28 @@
+{
+  "image": "IMG_20261008_115740.jpg",
+  "date": "2026-10-08",
+  "customer": null,
+  "lines": [
+    "f0 Gelu mM di tar MAS adi dy EP x. SO",
+    "r\" .",
+    "UNMOES — Wem tt A |",
+    ". (pa ) V Y PA sup ran DA 17 ra",
+    ": |",
+    "“ya yde",
+    "j A1 na « |",
+    "at SAMA : P La 1 x Dal 1 Cal WA",
+    "didi MAN . BL Aya ds NN Ot 2 Gel Ya,",
+    ": : BRO A1 KS Sai PA NAADRRRAN LA AAA",
+    "Ji i ia — Td “Kan ?"
+  ],
+  "items": [
+    {
+      "product": "Kopi",
+      "qty": 2,
+      "unit_price": 5000,
+      "struck": false
+    }
+  ],
+  "notes": "EasyOCR detected: Kopi, madu, makan, sore, Bon, 20, 2, 42, 28",
+  "source": "draft_from_ocr_analysis_needs_verification"
+}

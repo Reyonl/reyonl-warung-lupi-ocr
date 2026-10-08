@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Warung Lupi OCR — Ground Truth Builder</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; padding: 20px; background: #07090d; color: #e4e7eb; }
+  h1 { color: #63B3FF; margin-bottom: 4px; }
+  .subtitle { color: #8a8a8a; margin-bottom: 20px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .card { background: #1a1c24; border: 1px solid #333; border-radius: 12px; padding: 16px; }
+  .card h3 { margin: 0 0 8px 0; color: #63B3FF; font-size: 14px; }
+  .image { max-width: 100%; border-radius: 8px; margin-bottom: 12px; }
+  .ocr-text { font-family: 'Courier New', monospace; font-size: 12px; line-height: 1.4; white-space: pre-wrap; background: #0d1117; padding: 12px; border-radius: 8px; border: 1px solid #333; max-height: 200px; overflow-y: auto; }
+  .form-group { margin-bottom: 12px; }
+  label { display: block; font-size: 12px; color: #8a8a8a; margin-bottom: 4px; }
+  input, textarea, select { width: 100%; padding: 6px 8px; border-radius: 6px; border: 1px solid #444; background: #0d1117; color: #e4e7eb; font-size: 13px; }
+  button { background: #63B3FF; color: #000; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; margin-right: 8px; }
+  button:hover { background: #7dcfff; }
+  .save-all { background: #0f0; color: #000; }
+  table.items { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #333; font-size: 12px; }
+  th { color: #63B3FF; }
+  .add-item { margin-top: 8px; }
+</style>
+</head>
+<body>
+<h1>Warung Lupi OCR — Ground Truth Builder</h1>
+<p class="subtitle">5 images from D:/dataset. Fill date, customer, dan items for each image.</p>
+
+<div id="app"></div>
+
+<script>
+const DATA = [
+[
+  {
+    "image": "IMG_20261008_115733.jpg",
+    "image_path": "D:/dataset\\\\IMG_20261008_115733.jpg",
+    "lines": [
+      "1 TS —— ea 5. x 5 Au UV big Vit, Zalakl rev 5",
+      "| KRIS : Pu au. 4 2 Aa",
+      "ad ma Yan AA) kans V3 So kuy (Ec Gerv AA D- 5",
+      "1 j 2) Kama KAA SOrE: SA A4 Gal du dd UV Paket KE . ad P",
+      "j 3. Marco - SISA Lon luk FM 1 S0re A4 NIPDIS Madu & La 3 N",
+      "| es batu Ik Zi",
+      "Z Pang lee Cimerg Jk 4 2 Amal 4 Ane rd 4 iRati KILAUA",
+      "| Anak 1 beyg234 Finkecafj : 9 Donat 4 2 Pasok AnnG Buc2 Dt",
+      "Do Gi pr Gef D Ae let daki Tki Dian IT",
+      "2 Mau » Wiu melau 201 T MamiF 4 Malkaoni Fe Tuilku",
+      "TT Sandy 2 lanihn bela ai RaRa KA maa TU |",
+      "3- Tejo: Relak 4 1 ke 3 Hita KI",
+      "4.iTom Di Ae i |",
+      "ci lunas",
+      "AB NI M1 Rak 313 Ama Kk."
+    ]
+  },
+  {
+    "image": "IMG_20261008_115737.jpg",
+    "image_path": "D:/dataset\\\\IMG_20261008_115737.jpg",
+    "lines": [
+      ".",
+      "1 M4. Park, 4x Kake 5 GI MAL 4 kaki WA Mou. .2 AA )",
+      "",
+      "Suca | L",
+      "5 1G Ikfenu gs Tjucuk 4 TEA 4 mia aya naa MP. v LUSA |",
+      "— MEA Gue - An Kd Satu Colueh - j",
+      "———— BEA Tnhus G5 Abe, Ep 1 tele LG 23: Budha II",
+      "u Jap ie EGa TN are Caneetk AAA Naud 1 NO Pi",
+      "—— Mesmgos sk Kurama Sk :",
+      "B |eimagasar lapis Sk AA SURA PMA) Le Me Aa aa",
+      ". Ba L nada : katy at",
+      "2 Sama aa an",
+      "B I5o mma ba Ie Ay Su PETA",
+      "T Hi: MG U Tam : berga. PU p4 uga KA",
+      "",
+      "“2: Iu Auug 5 Awak MA Ad 1 ia"
+    ]
+  },
+  {
+    "image": "IMG_20261008_115740.jpg",
+    "image_path": "D:/dataset\\\\IMG_20261008_115740.jpg",
+    "lines": [
+      "f0 Gelu mM di tar MAS adi dy EP x. SO",
+      "r\" .",
+      "UNMOES — Wem tt A |",
+      ". (pa ) V Y PA sup ran DA 17 ra",
+      ": |",
+      "“ya yde",
+      "j A1 na « |",
+      "at SAMA : P La 1 x Dal 1 Cal WA",
+      "didi MAN . BL Aya ds NN Ot 2 Gel Ya,",
+      ": : BRO A1 KS Sai PA NAADRRRAN LA AAA",
+      "Ji i ia — Td “Kan ?"
+    ]
+  },
+  {
+    "image": "IMG_20261008_115742.jpg",
+    "image_path": "D:/dataset\\\\IMG_20261008_115742.jpg",
+    "lines": [
+      "P | Aa",
+      "BnAai al 1 ane An pe nAnG  A Gu —",
+      "DN Down EU CAS Jun Dane ak v -|e3) Hp :",
+      "Ia JPU sok",
+      "MEA 1. Sa Ka Mp Ddome If 4 Makan andi 8 reg B'",
+      "JEDA. TN. 5 Gr BM",
+      "Deo Dm Mita 3 Beri— )",
+      "Mk ii ia |) i"
+    ]
+  },
+  {
+    "image": "IMG_20261008_115746.jpg",
+    "image_path": "D:/dataset\\\\IMG_20261008_115746.jpg",
+    "lines": [
+      "si WNA kemarin ne aa",
+      "ds: Wild Some uk. ia YO",
+      "MH",
+      "a BA di - Bus RA",
+      "dag CE (PA Cted 1 im 128: woya. Si . Gn Yak. 1G",
+      "VI) j 1 Ly ! Ce Apu SAN",
+      "TI eV . 302 I Me Sol A : Hp Ala Awn AS ”y PP PAGI BR Wa",
+      "3 , | BA j . et MV, ) VA. N na",
+      "—. “Tuna",
+      "Mi ME an AM GUA GEA 4 Tua £ Dori mba. Bo",
+      "ni MA op 3 row “dB yA kep 4 AT me Alt AGuat",
+      "Daru — Meher Kon 6 SUS EA Pend G KA",
+      "t TIVS Ll. Die. &",
+      "ad. Pu: Ar ah LO 4 SuGu Jae mama SKA",
+      "nk oi Li “0 Bi 1 ian ii",
+      "— Mw mua: Lwenn 08 Me. SL"
+    ]
+  }
+]
+];
+
+let gt = {};
+DATA.forEach(d => { gt[d.image] = { date: '', customer: '', lines: [...d.lines], items: [] }; });
+
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = DATA.map(d => {
+    const g = gt[d.image];
+    const itemsHtml = g.items.map((it, i) => `
+      <tr>
+        <td><input type="text" placeholder="product name" value="${it.product||''}" onchange="gt['${d.image}'].items[${i}].product=this.value"></td>
+        <td><input type="number" placeholder="qty" value="${it.qty||1}" onchange="gt['${d.image}'].items[${i}].qty=parseInt(this.value)||1"></td>
+        <td><input type="number" placeholder="price" value="${it.unit_price||''}" onchange="gt['${d.image}'].items[${i}].unit_price=parseInt(this.value)||0"></td>
+        <td><input type="checkbox" ${it.struck?'checked':''} onchange="gt['${d.image}'].items[${i}].struck=this.checked"></td>
+        <td><button onclick="gt['${d.image}'].items.splice(${i},1);render()">Remove</button></td>
+      </tr>
+    `).join('');
+    
+    return `
+    <div class="card">
+      <h3>${d.image}</h3>
+      <img src="file:///${d.image_path}" class="image" alt="${d.image}">
+      <div class="form-group">
+        <label>Date (YYYY-MM-DD)</label>
+        <input type="date" value="${g.date}" onchange="gt['${d.image}'].date=this.value">
+      </div>
+      <div class="form-group">
+        <label>Customer</label>
+        <input type="text" placeholder="e.g. Bu Sri, Marco, Rama" value="${g.customer||''}" onchange="gt['${d.image}'].customer=this.value">
+      </div>
+      <div class="form-group">
+        <label>OCR Lines (raw from Tesseract)</label>
+        <div class="ocr-text">${g.lines.map(l => l || ' ').join('\n')}</div>
+      </div>
+      <table class="items">
+        <thead><tr><th>Product</th><th>Qty</th><th>Price</th><th>Struck</th><th>Action</th></tr></thead>
+        <tbody>${itemsHtml}</tbody>
+      </table>
+      <div class="add-item">
+        <button onclick="gt['${d.image}'].items.push({product:'',qty:1,unit_price:0,struck:false});render()">+ Add Item</button>
+      </div>
+    </div>
+    `;
+  }).join('');
+  
+  // Add save button
+  app.innerHTML += `
+  <div class="card" style="margin-top: 20px;">
+    <button class="save-all" onclick="saveAll()">Save All Ground Truth as JSON</button>
+  </div>
+  `;
+}
+
+function saveAll() {
+  const output = DATA.map(d => ({
+    image: d.image,
+    date: gt[d.image].date || null,
+    customer: gt[d.image].customer || null,
+    lines: gt[d.image].lines.filter(l => l.trim()),
+    items: gt[d.image].items,
+  }));
+  
+  const blob = new Blob([JSON.stringify(output, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'eval_ground_truth.json';
+  a.click();
+  alert('Saved as eval_ground_truth.json — paste ke terminal untuk import ke ground_truth/');
+}
+
+render();
+</script>
+</body>
+</html>
