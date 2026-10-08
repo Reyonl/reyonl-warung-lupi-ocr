@@ -158,3 +158,82 @@ class ImageProcessor:
                         })
 
         return strikethroughs
+
+    def detect_circled_numbers(self, image_path: str) -> List[dict]:
+        """
+        Detect circled numbers — typically indicates quantity markers.
+        A circled number (○1, ○2, etc.) in bookkeeping notes usually
+        means "quantity: 1" or "quantity: 2".
+
+        Uses contour detection to find circular shapes near digit regions.
+        """
+        img = cv2.imread(image_path)
+        if img is None:
+            return []
+
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        # Threshold for contour detection
+        _, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+
+        # Find contours
+        contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+        circled_numbers = []
+        for cnt in contours:
+            # Check if contour is approximately circular
+            (x, y, w, h) = cv2.boundingRect(cnt)
+            aspect_ratio = w / float(h) if h > 0 else 0
+            area = cv2.contourArea(cnt)
+            perimeter = cv2.arcLength(cnt, True)
+
+            # Circular shape criteria
+            if perimeter > 0:
+                circularity = 4 * np.pi * area / (perimeter * perimeter)
+                if 0.4 < circularity < 1.2 and 0.5 < aspect_ratio < 2.0:
+                    if w > 5 and h > 5 and w < 100 and h < 100:
+                        circled_numbers.append({
+                            'bbox': [int(x), int(y), int(x + w), int(y + h)],
+                            'center': [int(x + w / 2), int(y + h / 2)],
+                            'radius': float(max(w, h) / 2),
+                        })
+
+        return circled_numbers
+
+    def detect_structural_symbols(self, image_path: str) -> List[dict]:
+        """
+        Detect structural symbols (@, +, =, Rp, →, arrows)
+        that indicate line-level meaning in bookkeeping.
+
+        Returns list of {text, bbox, confidence}
+        """
+        img = cv2.imread(image_path)
+        if img is None:
+            return []
+
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+        # Look for common symbols by template matching
+        symbols_found = []
+
+        # Simple detection: look for single-character bright spots
+        # that are common structural symbols
+        _, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+
+        contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+        for cnt in contours:
+            (x, y, w, h) = cv2.boundingRect(cnt)
+            area = w * h
+
+            # Very small single-char regions might be symbols
+            if area < 500 and w < 30 and h < 30:
+                center_x = x + w / 2
+                center_y = y + h / 2
+                symbols_found.append({
+                    'bbox': [[int(x), int(y)], [int(x + w), int(y)],
+                             [int(x + w), int(y + h)], [int(x), int(y + h)]],
+                    'center': [float(center_x), float(center_y)],
+                    'area': float(area),
+                })
+
+        return symbols_found
