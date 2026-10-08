@@ -12,16 +12,14 @@ Key responsibilities:
 """
 
 import logging
-import re
 from typing import List, Optional, Dict, Any
 from dataclasses import dataclass, field
 from datetime import datetime
 from uuid import uuid4
 
-from src.interpreter.service import InterpretedResult, InterpretedItem, InterpretedCustomer
+from src.interpreter.service import InterpretedResult, InterpretedItem
 
 logger = logging.getLogger(__name__)
-
 
 @dataclass
 class DraftTransactionItem:
@@ -31,11 +29,11 @@ class DraftTransactionItem:
     product_id: Optional[int] = None  # ID in Warung Lupi product DB
     quantity: int = 1
     unit_price: float = 0.0
+    unit: str = "pcs"
     subtotal: float = 0.0  # quantity * unit_price
     confidence: float = 0.0  # how confident we are in this item
     is_manual: bool = False  # if True, user added/edited manually
     notes: str = ""
-    # Fields that need user review
     warnings: List[str] = field(default_factory=list)
 
     def to_dict(self) -> dict:
@@ -45,6 +43,7 @@ class DraftTransactionItem:
             "product_id": self.product_id,
             "quantity": self.quantity,
             "unit_price": self.unit_price,
+            "unit": self.unit,
             "subtotal": self.subtotal,
             "confidence": round(self.confidence, 4),
             "is_manual": self.is_manual,
@@ -55,33 +54,25 @@ class DraftTransactionItem:
 
 @dataclass
 class DraftTransaction:
-    """
-    Draft transaction — NOT a finalized transaction.
-    
-    Lives in the 'pending' state until user confirms.
-    Can be created from AI interpretation or manually.
-    """
+    """Draft transaction — NOT a finalized transaction."""
     id: str  # UUID for this draft
     date: Optional[str] = None  # ISO format: "2026-10-08"
     customer_id: Optional[int] = None
     customer_name: str = ""
     items: List[DraftTransactionItem] = field(default_factory=list)
     notes: str = ""
-    # State
-    status: str = "draft"  # "draft" | "confirmed" | "cancelled"
+    status: str = "draft"  # draft | confirmed | cancelled
     created_at: str = ""
-    # Audit trail for Phase 7
     interpretation_log: Dict[str, Any] = field(default_factory=dict)
-    
-    # Totals
+
     @property
     def total_quantity(self) -> int:
         return sum(item.quantity for item in self.items)
-    
+
     @property
     def total_amount(self) -> float:
         return sum(item.subtotal for item in self.items)
-    
+
     @property
     def has_unresolved_warnings(self) -> bool:
         """Check if any item has warnings that need user attention."""
@@ -89,7 +80,7 @@ class DraftTransaction:
             len(item.warnings) > 0 or item.confidence < 0.5
             for item in self.items
         )
-    
+
     @property
     def unresolved_items(self) -> List[DraftTransactionItem]:
         """Items that need user review."""
@@ -117,14 +108,7 @@ class DraftTransaction:
 
 
 class DraftTransactionService:
-    """
-    Creates and manages draft transactions from AI interpretation.
-    
-    Phase 5 core: convert InterpretedResult → DraftTransaction
-    
-    The draft is editable (Phase 6: User Confirmation).
-    Only finalized when user presses "Simpan sebagai Bon".
-    """
+    """Creates and manages draft transactions from AI interpretation."""
 
     def __init__(self):
         pass
@@ -133,17 +117,7 @@ class DraftTransactionService:
         self,
         interpretation: InterpretedResult,
     ) -> DraftTransaction:
-        """
-        Convert Phase 2 interpretation into a Phase 5 draft transaction.
-
-        Rules:
-        - Use matched product_id if confidence > 0.85 (Phase 3 result)
-        - Use matched customer_id if confidence > 0.8 (Phase 4 result)
-        - If qty/price missing, default qty=1 and leave price for user to fill
-        - If price is detected but no product, use detected price
-        - Flag items with low confidence or missing data
-        - Preserve all uncertainty information for audit (Phase 7)
-        """
+        """Convert Phase 2 interpretation into a Phase 5 draft transaction."""
         draft = DraftTransaction(
             id=str(uuid4()),
             date=interpretation.date,
@@ -156,7 +130,6 @@ class DraftTransactionService:
             if interpretation.customer.matched_customer_id:
                 draft.customer_id = interpretation.customer.matched_customer_id
             elif interpretation.customer.customer_candidates:
-                # Low confidence — flag for review
                 top_candidate = interpretation.customer.customer_candidates[0]
                 if top_candidate["score"] < 0.7:
                     draft.customer_name = f"{interpretation.customer.detected_name} (belum dipastikan)"
@@ -193,23 +166,17 @@ class DraftTransactionService:
             id=str(uuid4()),
             description=item.detected_text,
             quantity=item.quantity if item.quantity is not None else 1,
-            unit_price=item.price if item.price is not None else 0.0,
+            unit_price=float(item.price) if item.price is not None else 0.0,
+            unit="pcs",
             confidence=item.confidence,
         )
 
-        # Use matched product if available
         if item.matched_product_id:
             draft_item.product_id = item.matched_product_id
             draft_item.description = item.matched_product_name
-            # If price was not detected, use default price from product
-            if item.price is None and not item.uncertain_fields:
-                # We'll need product default price — pass via context
-                pass
 
-        # Calculate subtotal
         draft_item.subtotal = draft_item.quantity * draft_item.unit_price
 
-        # Add warnings for review
         if not item.matched_product_id:
             draft_item.warnings.append("produk_tidak_ditemukan — pilih manual")
         if item.quantity is None:
@@ -217,55 +184,41 @@ class DraftTransactionService:
         if item.price is None:
             draft_item.warnings.append("harga_tidak_terdeteksi")
         if item.struck_through:
-            draft_item.warnings.append("coretan_dicolang-krang — periksa ulang")
+            draft_item.warnings.append("coretan — periksa ulang")
         for uf in item.uncertain_fields:
             draft_item.warnings.append(f"uncertain_{uf}")
 
         return draft_item
 
     def apply_product_defaults(
-        self,
-        draft: DraftTransaction,
-        products: List[dict],
+        self, draft: DraftTransaction, products: List[dict],
     ) -> DraftTransaction:
-        """
-        Apply default prices and units from product database
-        to items that have product_id matched.
-        
-        This is called AFTER the user has had a chance to select
-        products in Phase 6 (User Confirmation).
-        """
+        """Apply default prices and units from product database."""
         product_lookup = {p["id"]: p for p in products}
         for item in draft.items:
             if item.product_id and item.product_id in product_lookup:
                 prod = product_lookup[item.product_id]
                 if item.unit_price == 0.0:
-                    item.unit_price = prod.get("default_price", 0.0)
+                    item.unit_price = float(prod.get("default_price", 0.0))
                 if prod.get("unit"):
-                    item.notes = f"unit: {prod['unit']}"
+                    item.unit = prod["unit"]
                 item.subtotal = item.quantity * item.unit_price
         return draft
 
     def update_item_quantity(
-        self,
-        draft: DraftTransaction,
-        item_id: str,
-        quantity: int,
+        self, draft: DraftTransaction, item_id: str, quantity: int,
     ) -> DraftTransaction:
         """Update an item's quantity (Phase 6: user editing)."""
         for item in draft.items:
             if item.id == item_id:
-                item.quantity = quantity
+                item.quantity = max(1, quantity)
                 item.is_manual = True
-                item.subtotal = quantity * item.unit_price
+                item.subtotal = item.quantity * item.unit_price
                 break
         return draft
 
     def update_item_price(
-        self,
-        draft: DraftTransaction,
-        item_id: str,
-        price: float,
+        self, draft: DraftTransaction, item_id: str, price: float,
     ) -> DraftTransaction:
         """Update an item's price (Phase 6: user editing)."""
         for item in draft.items:
@@ -276,13 +229,27 @@ class DraftTransactionService:
                 break
         return draft
 
+    def update_item_product(
+        self, draft: DraftTransaction, item_id: str,
+        product_id: int, product_name: str,
+    ) -> DraftTransaction:
+        """Update an item's product (Phase 6: user selects product)."""
+        for item in draft.items:
+            if item.id == item_id:
+                item.product_id = product_id
+                item.description = product_name
+                item.is_manual = True
+                item.warnings = [
+                    w for w in item.warnings
+                    if "produk_tidak_ditemukan" not in w
+                ]
+                break
+        return draft
+
     def add_manual_item(
-        self,
-        draft: DraftTransaction,
-        description: str,
-        quantity: int = 1,
-        unit_price: float = 0.0,
-        product_id: Optional[int] = None,
+        self, draft: DraftTransaction, description: str,
+        quantity: int = 1, unit_price: float = 0.0,
+        product_id: Optional[int] = None, unit: str = "pcs",
     ) -> DraftTransaction:
         """Add a new item manually (Phase 6: user adding item)."""
         draft_item = DraftTransactionItem(
@@ -291,27 +258,23 @@ class DraftTransactionService:
             product_id=product_id,
             quantity=quantity,
             unit_price=unit_price,
+            unit=unit,
             subtotal=quantity * unit_price,
-            confidence=1.0,  # User-set
+            confidence=1.0,
             is_manual=True,
         )
         draft.items.append(draft_item)
         return draft
 
     def remove_item(
-        self,
-        draft: DraftTransaction,
-        item_id: str,
+        self, draft: DraftTransaction, item_id: str,
     ) -> DraftTransaction:
         """Remove an item (Phase 6: user deletes item)."""
         draft.items = [item for item in draft.items if item.id != item_id]
         return draft
 
     def change_customer(
-        self,
-        draft: DraftTransaction,
-        customer_id: int,
-        customer_name: str,
+        self, draft: DraftTransaction, customer_id: int, customer_name: str,
     ) -> DraftTransaction:
         """Change customer (Phase 6: user selects customer)."""
         draft.customer_id = customer_id
@@ -319,33 +282,35 @@ class DraftTransactionService:
         return draft
 
     def confirm_draft(self, draft: DraftTransaction) -> Dict[str, Any]:
-        """
-        Phase 6 → Phase 9: Convert draft to finalized transaction payload.
-        
-        Returns the API payload format expected by:
-        POST /api/transactions
-        POST /api/transactions/{id}/items
-        
-        Does NOT call the API — that's handled by the Laravel backend.
-        """
+        """Phase 6 -> Phase 9: Convert draft to Laravel API payload."""
         draft.status = "confirmed"
-        
+
+        transaction_payload = {
+            "customer_id": draft.customer_id,
+            "transaction_date": draft.date,
+            "notes": draft.notes,
+        }
+
         items_payload = []
         for item in draft.items:
+            unit_price_int = int(round(item.unit_price))
+            qty = max(1, item.quantity)
             items_payload.append({
                 "product_id": item.product_id,
-                "unit_price": item.unit_price,
-                "quantity": item.quantity,
-                "subtotal": item.subtotal,
-                "notes": item.notes,
+                "product_name": item.description,
+                "description": item.notes if item.notes else None,
+                "quantity": qty,
+                "unit": item.unit,
+                "unit_price": unit_price_int,
+                "subtotal": int(round(qty * unit_price_int)),
             })
 
         return {
-            "date": draft.date,
-            "customer_id": draft.customer_id,
-            "customer_name": draft.customer_name,
+            "transaction": transaction_payload,
             "items": items_payload,
-            "total_amount": draft.total_amount,
-            "notes": draft.notes,
+            "total_amount": int(round(draft.total_amount)),
+            "customer_name": draft.customer_name,
             "draft_id": draft.id,
+            "has_unresolved_warnings": draft.has_unresolved_warnings,
+            "unresolved_count": len(draft.unresolved_items),
         }
