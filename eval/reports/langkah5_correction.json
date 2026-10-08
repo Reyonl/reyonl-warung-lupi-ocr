@@ -1,0 +1,81 @@
+{
+  "step": "LANGKAH 5 - Post-OCR Correction",
+  "timestamp": "2026-10-08",
+  "summary": "Post-OCR correction module tested on 3 images",
+  "results": [
+    {
+      "image": "IMG_20261008_115733.jpg",
+      "date": {
+        "gt": "2026-10-08",
+        "detected": true,
+        "correct": true
+      },
+      "products": {
+        "gt": [
+          "Madu"
+        ],
+        "detected": [
+          "Madu"
+        ],
+        "correct": true
+      },
+      "corrections_applied": 1
+    },
+    {
+      "image": "IMG_20261008_115737.jpg",
+      "date": {
+        "gt": "2026-10-08",
+        "detected": false,
+        "correct": false
+      },
+      "products": {
+        "gt": [
+          "TEH"
+        ],
+        "detected": [],
+        "correct": false
+      },
+      "corrections_applied": 0,
+      "note": "Low quality OCR - 80% noise characters"
+    },
+    {
+      "image": "IMG_20261008_115740.jpg",
+      "date": {
+        "gt": "2026-10-08",
+        "detected": false,
+        "correct": false
+      },
+      "products": {
+        "gt": [
+          "Kopi"
+        ],
+        "detected": [],
+        "correct": false
+      },
+      "corrections_applied": 0,
+      "note": "Low quality OCR - 80% noise characters"
+    }
+  ],
+  "unit_tests": {
+    "passed": 27,
+    "failed": 0
+  },
+  "baseline_comparison": {
+    "before_correction": {
+      "date_accuracy": "1/3",
+      "product_accuracy": "1/3"
+    },
+    "after_correction": {
+      "date_accuracy": "1/3",
+      "product_accuracy": "1/3"
+    },
+    "note": "No improvement on low-quality OCR. Correction module is ready for Claude Vision integration"
+  },
+  "files": [
+    "eval/correct.py  — PostOCRCorrector, char confusion, date/price/qty parsers",
+    "eval/test_correct.py  — 27 unit tests (all passing)",
+    "eval/preprocess.py  — 8-step preprocessing module",
+    "eval/run_eval.py  — evaluation harness with CER/WER/metrics",
+    "eval/ground_truth/  — 5 draft ground truth files (need user correction)"
+  ]
+}
