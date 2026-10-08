@@ -1,0 +1,674 @@
+[
+  {
+    "date": "08 OKT",
+    "sections": [
+      {
+        "customer": "KRIS",
+        "items": [
+          {
+            "product": "nipis madu",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "nipis madu"
+          },
+          {
+            "product": "Aqua B",
+            "quantity": 2,
+            "unit_price": null,
+            "raw_line": "2 Aqua B"
+          },
+          {
+            "product": "Rokok",
+            "quantity": 3,
+            "unit_price": 35000,
+            "raw_line": "3 bks Rokok 105k"
+          },
+          {
+            "product": "gorengan",
+            "quantity": 1,
+            "unit_price": 25000,
+            "raw_line": "gorengan 25k"
+          },
+          {
+            "product": "kopi",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "kopi"
+          },
+          {
+            "product": "kopi",
+            "quantity": 2,
+            "unit_price": null,
+            "raw_line": "2 kopi"
+          },
+          {
+            "product": "Es Cream",
+            "quantity": 1,
+            "unit_price": 3000,
+            "raw_line": "Es Cream 3k"
+          }
+        ]
+      },
+      {
+        "customer": "Rama",
+        "items": [
+          {
+            "product": "Camel sore",
+            "quantity": 1,
+            "unit_price": 28000,
+            "raw_line": "Camel sore 28"
+          },
+          {
+            "product": "Galon",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Galon"
+          },
+          {
+            "product": "T Botol",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "T Botol"
+          },
+          {
+            "product": "T. Jus",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "T. Jus"
+          }
+        ]
+      },
+      {
+        "customer": "marco",
+        "items": [
+          {
+            "product": "sisa Bon",
+            "quantity": 1,
+            "unit_price": 14000,
+            "raw_line": "sisa Bon 14k"
+          },
+          {
+            "product": "m 🌟 sore",
+            "quantity": 1,
+            "unit_price": 28000,
+            "raw_line": "m 🌟 28 sore"
+          },
+          {
+            "product": "es batu",
+            "quantity": 1,
+            "unit_price": 1000,
+            "raw_line": "es batu 1k"
+          }
+        ]
+      },
+      {
+        "customer": "Ban 6 lee",
+        "items": [
+          {
+            "product": "Cimory",
+            "quantity": 1,
+            "unit_price": 9000,
+            "raw_line": "Cimory 9k"
+          },
+          {
+            "product": "Aqua k",
+            "quantity": 2,
+            "unit_price": null,
+            "raw_line": "2 Aqua k"
+          },
+          {
+            "product": "Abc botol",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Abc botol"
+          },
+          {
+            "product": "kali",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "1 kali"
+          },
+          {
+            "product": "susu",
+            "quantity": 2,
+            "unit_price": null,
+            "raw_line": "2 susu"
+          },
+          {
+            "product": "Roti",
+            "quantity": 4,
+            "unit_price": null,
+            "raw_line": "4 Roti"
+          },
+          {
+            "product": "Beng",
+            "quantity": 1,
+            "unit_price": 3000,
+            "raw_line": "1 Beng 3k"
+          },
+          {
+            "product": "Indocafe",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Indocafe"
+          },
+          {
+            "product": "Donat",
+            "quantity": 2,
+            "unit_price": null,
+            "raw_line": "2 Donat"
+          },
+          {
+            "product": "paket drink Beng",
+            "quantity": 2,
+            "unit_price": 4000,
+            "raw_line": "2 paket drink Beng 8"
+          },
+          {
+            "product": "pop mie",
+            "quantity": 2,
+            "unit_price": 6000,
+            "raw_line": "2 pop mie 12k"
+          },
+          {
+            "product": "Oreyon Rolls",
+            "quantity": 1,
+            "unit_price": 6000,
+            "raw_line": "Oreyon Rolls 6k"
+          },
+          {
+            "product": "dader",
+            "quantity": 1,
+            "unit_price": 5000,
+            "raw_line": "dader 5k"
+          },
+          {
+            "product": "T manis",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "T manis"
+          },
+          {
+            "product": "emping",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "emping"
+          }
+        ]
+      },
+      {
+        "customer": "Daun",
+        "items": [
+          {
+            "product": "mlen malam",
+            "quantity": 1,
+            "unit_price": 20000,
+            "raw_line": "mlen malam 20"
+          },
+          {
+            "product": "makaroni Millen",
+            "quantity": 1,
+            "unit_price": 8000,
+            "raw_line": "makaroni 8k Millen"
+          },
+          {
+            "product": "Rokok",
+            "quantity": 1,
+            "unit_price": 32000,
+            "raw_line": "Rokok 32 k"
+          },
+          {
+            "product": "gorengan",
+            "quantity": 1,
+            "unit_price": 2000,
+            "raw_line": "gorengan 2k"
+          }
+        ]
+      },
+      {
+        "customer": "Mama SaSa",
+        "items": [
+          {
+            "product": "Indomi",
+            "quantity": 1,
+            "unit_price": 7000,
+            "raw_line": "Indomi 7k"
+          },
+          {
+            "product": "T jus",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "T jus"
+          },
+          {
+            "product": "T pucuk yale",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "T pucuk yale"
+          },
+          {
+            "product": "Aqua Sisi kaleng yaki",
+            "quantity": 1,
+            "unit_price": 8000,
+            "raw_line": "Aqua Sisi kaleng 8k yaki"
+          }
+        ]
+      },
+      {
+        "customer": "Sandi",
+        "items": [
+          {
+            "product": "larutan Botol",
+            "quantity": 1,
+            "unit_price": 9000,
+            "raw_line": "larutan Botol 9k"
+          },
+          {
+            "product": "Susu",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Susu"
+          },
+          {
+            "product": "gorengan",
+            "quantity": 1,
+            "unit_price": 5000,
+            "raw_line": "gorengan 5k"
+          },
+          {
+            "product": "makan Nasi tege balok orele",
+            "quantity": 1,
+            "unit_price": 12000,
+            "raw_line": "makan Nasi tege balok orele 12k"
+          },
+          {
+            "product": "G. lele",
+            "quantity": 1,
+            "unit_price": 5000,
+            "raw_line": "G. lele 5k"
+          },
+          {
+            "product": "Rokok S.12",
+            "quantity": 1,
+            "unit_price": 38000,
+            "raw_line": "Rokok S.12 38"
+          }
+        ]
+      },
+      {
+        "customer": "Haryo",
+        "items": [
+          {
+            "product": "Rokok 🌟",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Rokok 🌟"
+          },
+          {
+            "product": "Aqua B",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Aqua B"
+          }
+        ]
+      },
+      {
+        "customer": "Toingel",
+        "items": [
+          {
+            "product": "Status",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "lunas"
+          }
+        ]
+      },
+      {
+        "customer": "Alfar",
+        "items": [
+          {
+            "product": "ABC",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "ABC"
+          },
+          {
+            "product": "Rokok",
+            "quantity": 1,
+            "unit_price": 32000,
+            "raw_line": "Rokok 32"
+          },
+          {
+            "product": "Aqua B",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Aqua B."
+          }
+        ]
+      },
+      {
+        "customer": "Andy",
+        "items": [
+          {
+            "product": "kopi doble",
+            "quantity": 1,
+            "unit_price": 7000,
+            "raw_line": "kopi doble 7k"
+          }
+        ]
+      }
+    ],
+    "all_text": "08 OKT Kamis\n\n1. KRIS = nipis madu + 2 Aqua B + 3 bks Rokok 105k +\ngorengan 25k + kopi + 2 kopi + Es Cream 3k +\n\n2) Rama = Camel sore 28 + Galon + T Botol + kopi + T. Jus\n\n3) marco = sisa Bon 14k + m 🌟 28 sore + nipis madu + kopi +\nes batu 1k\n\n4. Ban 6 lee = Cimory 9k + 2 Aqua k + Abc botol + 1 kali + 2 susu\n4 Roti + 1 Beng 3k + Indocafe + 2 Donat + 2 paket drink Beng 8 +\n2 pop mie 12k + Oreyon Rolls 6k + 2 Aqua k + dader 5k + T manis\nemping +\n\n5. Daun = mlen malam 20 + T manis + makaroni 8k Millen\nRokok 32 k + gorengan 2k + kopi\n\n6. Mama SaSa = Indomi 7k + T jus + T pucuk yale +\nAqua Sisi kaleng 8k yaki +\n\n7. Sandi = larutan Botol 9k + Susu + gorengan 5k +\nmakan Nasi tege balok orele 12k + G. lele 5k + Rokok S.12 38\nkopi +\n8. Haryo = Rokok 🌟 + Kopi + Aqua B +\n\n9. Toingel = Kopi + Aqua B + lunas\n10. Alfar = T Manis + ABC + Rokok 32 + Aqua B.\n11. Andy = kopi doble 7k +",
+    "_processing_time": 24.9,
+    "_image_size_kb": 3038,
+    "_model": "gemini-3.5-flash",
+    "_image": "IMG_20261008_115733.jpg",
+    "_total_items": 50
+  },
+  {
+    "date": "08 OKT",
+    "sections": [
+      {
+        "customer": "Risky",
+        "items": [
+          {
+            "product": "T botol",
+            "quantity": 1,
+            "unit_price": 5000,
+            "raw_line": "T botol 5k"
+          },
+          {
+            "product": "Aqua B",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Aqua B"
+          },
+          {
+            "product": "gorengan",
+            "quantity": null,
+            "unit_price": 12000,
+            "raw_line": "gorengan 12k"
+          },
+          {
+            "product": "Surya 12",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Surya 12"
+          },
+          {
+            "product": "es susu",
+            "quantity": 1,
+            "unit_price": 6000,
+            "raw_line": "es susu 6k"
+          }
+        ]
+      },
+      {
+        "customer": "Andres",
+        "items": [
+          {
+            "product": "T manis",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "T manis"
+          },
+          {
+            "product": "kopi",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "kopi"
+          }
+        ]
+      },
+      {
+        "customer": "Pak RT babe",
+        "items": [
+          {
+            "product": "susu jahe",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "susu jahe"
+          },
+          {
+            "product": "roti",
+            "quantity": 1,
+            "unit_price": 3000,
+            "raw_line": "roti 3k"
+          },
+          {
+            "product": "kue",
+            "quantity": 3,
+            "unit_price": null,
+            "raw_line": "kue 3"
+          }
+        ]
+      },
+      {
+        "customer": "Irfan",
+        "items": [
+          {
+            "product": "T pucuk",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "T pucuk"
+          },
+          {
+            "product": "Roti",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Roti"
+          },
+          {
+            "product": "gorengan",
+            "quantity": 9,
+            "unit_price": null,
+            "raw_line": "gorengan 9"
+          },
+          {
+            "product": "sosis",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "sosis 1"
+          },
+          {
+            "product": "T jus makan",
+            "quantity": 1,
+            "unit_price": 24000,
+            "raw_line": "T jus makan 24k"
+          }
+        ]
+      },
+      {
+        "customer": "Agus",
+        "items": [
+          {
+            "product": "Aqua K",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Aqua K"
+          },
+          {
+            "product": "Susu Cokelat",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "Susu Cokelat"
+          }
+        ]
+      },
+      {
+        "customer": "Untung",
+        "items": [
+          {
+            "product": "kopi",
+            "quantity": 2,
+            "unit_price": null,
+            "raw_line": "2 kopi"
+          },
+          {
+            "product": "Rokok 16",
+            "quantity": 1,
+            "unit_price": 38000,
+            "raw_line": "Rokok 16 38"
+          },
+          {
+            "product": "gorengan",
+            "quantity": null,
+            "unit_price": 15000,
+            "raw_line": "gorengan 15k"
+          },
+          {
+            "product": "Supri Cancell",
+            "quantity": 1,
+            "unit_price": 34000,
+            "raw_line": "Supri Cancell 34k"
+          },
+          {
+            "product": "extrajos",
+            "quantity": 1,
+            "unit_price": 5000,
+            "raw_line": "extrajos 5k"
+          },
+          {
+            "product": "kukubima",
+            "quantity": 1,
+            "unit_price": 5000,
+            "raw_line": "kukubima 5k"
+          }
+        ]
+      },
+      {
+        "customer": "Doni",
+        "items": [
+          {
+            "product": "kopi biasa",
+            "quantity": 2,
+            "unit_price": 4000,
+            "raw_line": "2 kopi biasa 8k"
+          },
+          {
+            "product": "kopi double",
+            "quantity": 1,
+            "unit_price": 7000,
+            "raw_line": "kopi double 7k"
+          },
+          {
+            "product": "es",
+            "quantity": 1,
+            "unit_price": 5000,
+            "raw_line": "es 5k"
+          },
+          {
+            "product": "nagasari lapis",
+            "quantity": 1,
+            "unit_price": 5000,
+            "raw_line": "nagasari lapis 5k"
+          },
+          {
+            "product": "susu bantal",
+            "quantity": 1,
+            "unit_price": 8000,
+            "raw_line": "susu bantal 8k"
+          }
+        ]
+      },
+      {
+        "customer": "yudi frozen",
+        "items": [
+          {
+            "product": "gorengan",
+            "quantity": 4,
+            "unit_price": null,
+            "raw_line": "4 gorengan 7k"
+          },
+          {
+            "product": "Panter",
+            "quantity": 1,
+            "unit_price": 8000,
+            "raw_line": "Panter 8k"
+          }
+        ]
+      },
+      {
+        "customer": "iwan frozen",
+        "items": [
+          {
+            "product": "Air putih",
+            "quantity": 1,
+            "unit_price": 2000,
+            "raw_line": "Air putih 2k"
+          },
+          {
+            "product": "gorengan Oler",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "gorengan Oler"
+          },
+          {
+            "product": "Legeg Ang",
+            "quantity": 1,
+            "unit_price": 5000,
+            "raw_line": "Legeg Ang 5k"
+          }
+        ]
+      },
+      {
+        "customer": "Mbak Tami",
+        "items": [
+          {
+            "product": "Energen Roll",
+            "quantity": 1,
+            "unit_price": 6000,
+            "raw_line": "Energen Roll 6k"
+          },
+          {
+            "product": "nucgor",
+            "quantity": 1,
+            "unit_price": 12000,
+            "raw_line": "nucgor 12k"
+          },
+          {
+            "product": "lepus",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "lepus"
+          }
+        ]
+      },
+      {
+        "customer": "Ibu tety",
+        "items": [
+          {
+            "product": "snack",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "snack"
+          },
+          {
+            "product": "tempe",
+            "quantity": 2,
+            "unit_price": null,
+            "raw_line": "(2 tempe)"
+          },
+          {
+            "product": "gorengan",
+            "quantity": null,
+            "unit_price": 4000,
+            "raw_line": "gorengan 4k"
+          },
+          {
+            "product": "HubR",
+            "quantity": 1,
+            "unit_price": null,
+            "raw_line": "HubR"
+          }
+        ]
+      }
+    ],
+    "all_text": "08 OKT Kamis\n12. Risky = T botol 5k + Aqua B + gorengan 12k + Surya 12 + es susu 6k +\n13. (Andres) = T manis + kopi = 61 - 25 = 36\n14. Pak RT babe = susu jahe + roti 3k + kue 3 +\n15. Irfan = T pucuk + Roti + gorengan 9 + sosis 1 + T jus makan 24k\n16. Agus = Aqua K + Susu Cokelat\n17. Untung = 2 kopi + Aqua B + Rokok 16 38 + gorengan gorengan 15k + Aqua K + Supri Cancell 34k + Aqua B + kopi + extrajos 5k + kukubima 5k\n18. Doni 2 kopi biasa 8k + kopi double 7k + Roti 3k + es 5k nagasari lapis 5k + susu bantal 8k +\n19. yudi frozen = Kopi + 4 gorengan 7k + Aqua B + Panter 8k\n20. iwan frozen = Air putih 2k gorengan Oler + Legeg Ang 5k +\n21. Mbak Tami = Energen Roll 6k + nucgor 12k + lepus +\n22. Ibu tety = snack + (2 tempe) + gorengan 4k + HubR",
+    "_processing_time": 16.5,
+    "_image_size_kb": 2831,
+    "_model": "gemini-3.5-flash",
+    "_image": "IMG_20261008_115737.jpg",
+    "_total_items": 40
+  }
+]
