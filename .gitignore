@@ -19,5 +19,11 @@ test_*.jpg
 Thumbs.db
 
 # Tesseract language data
-!tessdata/
-!tessdata/*.traineddata
+# Generated test/benchmark output
+scripts/_*test*.json
+scripts/_*output*.json
+scripts/_*benchmark*.json
+_audit_*.json
+audit_logs/
+
+# Tesseract language data (committed — small file)
