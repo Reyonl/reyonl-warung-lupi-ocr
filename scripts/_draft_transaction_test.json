@@ -1,0 +1,347 @@
+{
+  "id": "23c33637-635c-4197-86fe-0c3a937d1fed",
+  "date": "2026-10-08",
+  "customer_id": null,
+  "customer_name": "Jauts",
+  "items": [
+    {
+      "id": "94991303-940b-4735-ab0d-40dda7120703",
+      "description": "OkRIS madu 9 A < V + 2",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.9222,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    },
+    {
+      "id": "9a912213-2cfe-4349-becb-2403fcbb9fc7",
+      "description": "Rama Camel Jore 28 Pafe",
+      "product_id": null,
+      "quantity": 4,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.8979,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "harga_tidak_terdeteksi",
+        "uncertain_quantity_assumed_no_explicit_marker"
+      ]
+    },
+    {
+      "id": "99ee4150-073d-4a97-9e5d-4d45fd911fc2",
+      "description": "",
+      "product_id": null,
+      "quantity": 12,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.8683,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "harga_tidak_terdeteksi",
+        "uncertain_quantity_assumed_no_explicit_marker"
+      ]
+    },
+    {
+      "id": "196f23fd-9a64-463f-9f78-05e595849332",
+      "description": "marco sisâ Bon lyk + m # Sore madu",
+      "product_id": null,
+      "quantity": 28,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 1.0,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "harga_tidak_terdeteksi"
+      ]
+    },
+    {
+      "id": "a816b180-0320-4ecc-8fd1-610c1381a36b",
+      "description": "es batu Ik",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 1.0,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected",
+        "uncertain_low_confidence_product_match"
+      ]
+    },
+    {
+      "id": "abdea345-524d-42f9-a157-4e18c9fb2164",
+      "description": "lee = Cmorf gk 2 Aruk + fzaQi",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.5837,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    },
+    {
+      "id": "14f9c308-a388-4a15-b084-f03996bbedef",
+      "description": "t 8+",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.6219,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    },
+    {
+      "id": "55724920-ec7f-4ec8-966a-6b14682b0077",
+      "description": "clF V",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.4605,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    },
+    {
+      "id": "748fd2c9-55b9-4889-90e5-82c3f12a3186",
+      "description": "5- (aun T nani f nufleu",
+      "product_id": null,
+      "quantity": 4,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.7031,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "harga_tidak_terdeteksi",
+        "uncertain_quantity_assumed_no_explicit_marker"
+      ]
+    },
+    {
+      "id": "36f91126-fcc3-4ac2-8229-2ea03b6b7e1b",
+      "description": "32 lef",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.4583,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    },
+    {
+      "id": "54cd330b-056d-4b98-b343-79a683c0b1f5",
+      "description": "Ma na Sa Sa Inda n Hlf 4 7",
+      "product_id": null,
+      "quantity": 2,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.7529,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "harga_tidak_terdeteksi",
+        "uncertain_quantity_assumed_no_explicit_marker"
+      ]
+    },
+    {
+      "id": "c8eca68d-eeb5-4c4a-b3b6-0ad5ebdf08ea",
+      "description": "lanıı_balef Jl f Su6 F",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.5598,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    },
+    {
+      "id": "496502e4-245b-46dc-84b1-9e1f7a60abf4",
+      "description": "Orele_V2k + +Rokok",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 624.0,
+      "subtotal": 624.0,
+      "confidence": 0.9514,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "uncertain_quantity_missing"
+      ]
+    },
+    {
+      "id": "07f61117-c81a-4e91-9114-88f5a06b608d",
+      "description": "",
+      "product_id": null,
+      "quantity": 8,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.999,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "harga_tidak_terdeteksi",
+        "uncertain_quantity_assumed_no_explicit_marker"
+      ]
+    },
+    {
+      "id": "6350178a-f8d5-469b-b122-a62f7e02e973",
+      "description": "F",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.6463,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    },
+    {
+      "id": "9a1e8ae3-b8a4-4636-876c-07ae5802d901",
+      "description": "Junas",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.5516,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    },
+    {
+      "id": "12d3a63c-e60f-4c2b-b483-37375246e2b8",
+      "description": "",
+      "product_id": null,
+      "quantity": 2,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.9977,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "harga_tidak_terdeteksi",
+        "uncertain_quantity_assumed_no_explicit_marker"
+      ]
+    },
+    {
+      "id": "209bb820-096b-4c77-8c37-d429cc0c9851",
+      "description": "kalaas 8 2v An k",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.3642,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    },
+    {
+      "id": "5b14e376-3cc3-461c-84c5-29cd94d74d97",
+      "description": "ti",
+      "product_id": null,
+      "quantity": 1,
+      "unit_price": 0.0,
+      "subtotal": 0.0,
+      "confidence": 0.5368,
+      "is_manual": false,
+      "notes": "",
+      "warnings": [
+        "produk_tidak_ditemukan — pilih manual",
+        "quantity_tidak_terdeteksi",
+        "harga_tidak_terdeteksi",
+        "uncertain_no_quantity_detected"
+      ]
+    }
+  ],
+  "notes": "",
+  "status": "draft",
+  "created_at": "2026-10-08T13:43:29.697310",
+  "total_quantity": 72,
+  "total_amount": 624.0,
+  "has_unresolved_warnings": true,
+  "unresolved_count": 19,
+  "interpretation_log": {
+    "source_scan": {
+      "model": "easyocr-1.7",
+      "confidence": 0.43868271270896214,
+      "region_count": 127
+    },
+    "date_confidence": 0.7,
+    "customer": {
+      "detected_name": "Jauts",
+      "confidence": 0.7,
+      "matched_id": null,
+      "candidates": []
+    },
+    "total_confidence": 0.7274135057116731,
+    "uncertain": [],
+    "items_before_matching": 19
+  }
+}

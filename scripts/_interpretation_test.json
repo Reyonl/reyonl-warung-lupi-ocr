@@ -1,0 +1,286 @@
+{
+  "date": "2026-10-08",
+  "date_confidence": 0.7,
+  "customer": {
+    "detected_name": "Jauts",
+    "confidence": 0.7,
+    "matched_id": null,
+    "candidates": []
+  },
+  "items": [
+    {
+      "detected_text": "OkRIS madu 9 A < V + 2",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.9222,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "Rama Camel Jore 28 Pafe",
+      "quantity": 4,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.8979,
+      "struck_through": false,
+      "uncertain_fields": [
+        "quantity_assumed_no_explicit_marker"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "",
+      "quantity": 12,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.8683,
+      "struck_through": false,
+      "uncertain_fields": [
+        "quantity_assumed_no_explicit_marker"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "marco sisâ Bon lyk + m # Sore madu",
+      "quantity": 28,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 1.0,
+      "struck_through": false,
+      "uncertain_fields": [],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "es batu Ik",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 1.0,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected",
+        "low_confidence_product_match"
+      ],
+      "product_candidates": [
+        {
+          "product_id": 2,
+          "name": "Es Kopi",
+          "score": 0.3765
+        }
+      ],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "lee = Cmorf gk 2 Aruk + fzaQi",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.5837,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "t 8+",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.6219,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "clF V",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.4605,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "5- (aun T nani f nufleu",
+      "quantity": 4,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.7031,
+      "struck_through": false,
+      "uncertain_fields": [
+        "quantity_assumed_no_explicit_marker"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "32 lef",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.4583,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "Ma na Sa Sa Inda n Hlf 4 7",
+      "quantity": 2,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.7529,
+      "struck_through": false,
+      "uncertain_fields": [
+        "quantity_assumed_no_explicit_marker"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "lanıı_balef Jl f Su6 F",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.5598,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "Orele_V2k + +Rokok",
+      "quantity": null,
+      "price": 624.0,
+      "unit": "pcs",
+      "confidence": 0.9514,
+      "struck_through": false,
+      "uncertain_fields": [
+        "quantity_missing"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "",
+      "quantity": 8,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.999,
+      "struck_through": false,
+      "uncertain_fields": [
+        "quantity_assumed_no_explicit_marker"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "F",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.6463,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "Junas",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.5516,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "",
+      "quantity": 2,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.9977,
+      "struck_through": false,
+      "uncertain_fields": [
+        "quantity_assumed_no_explicit_marker"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "kalaas 8 2v An k",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.3642,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    },
+    {
+      "detected_text": "ti",
+      "quantity": null,
+      "price": null,
+      "unit": "pcs",
+      "confidence": 0.5368,
+      "struck_through": false,
+      "uncertain_fields": [
+        "no_quantity_detected"
+      ],
+      "product_candidates": [],
+      "matched_product_id": null,
+      "matched_product_name": ""
+    }
+  ],
+  "uncertain": [],
+  "notes": "",
+  "total_confidence": 0.7274
+}
