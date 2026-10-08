@@ -17,3 +17,7 @@ _*.jpg
 test_*.jpg
 .DS_Store
 Thumbs.db
+
+# Tesseract language data
+!tessdata/
+!tessdata/*.traineddata

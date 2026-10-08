@@ -1,0 +1,1247 @@
+{
+  "IMG_20261008_115733.jpg": {
+    "tesseract": {
+      "confidence": 0.4026347305389221,
+      "regions_count": 167,
+      "processing_time": 31.259554386138916,
+      "status": "uncertain",
+      "raw_text_preview": "f OY OKT kKamiS\n\n5 aa Z W% ai:\nih (DO -KRIS = OPE madu + 5 Fen t ka i. \u2014\n& 4 \\ > wy, =\n: Sn pce lens S A \\eene tes Gene 24\n\n(2) Rama Camel sore 2% + Galda 4 Bibates to ee a 7\n\nLior |\niv Se\nEe\n\n\\3.\n()- MACH = Sisa Gon Hk + MH 2B Sore 4 O'PIS Madu * ken\nes batu |\nk (4\n\n4. Pane lee - Cimory J + A Ata l",
+      "sample_regions": [
+        {
+          "text": "f",
+          "confidence": 0.0,
+          "bbox": [
+            [
+              253,
+              113
+            ],
+            [
+              299,
+              113
+            ],
+            [
+              299,
+              257
+            ],
+            [
+              253,
+              257
+            ]
+          ]
+        },
+        {
+          "text": "OY",
+          "confidence": 0.6,
+          "bbox": [
+            [
+              741,
+              101
+            ],
+            [
+              927,
+              101
+            ],
+            [
+              927,
+              256
+            ],
+            [
+              741,
+              256
+            ]
+          ]
+        },
+        {
+          "text": "OKT",
+          "confidence": 0.87,
+          "bbox": [
+            [
+              1021,
+              111
+            ],
+            [
+              1303,
+              111
+            ],
+            [
+              1303,
+              233
+            ],
+            [
+              1021,
+              233
+            ]
+          ]
+        },
+        {
+          "text": "kKamiS",
+          "confidence": 0.34,
+          "bbox": [
+            [
+              1488,
+              105
+            ],
+            [
+              1916,
+              105
+            ],
+            [
+              1916,
+              222
+            ],
+            [
+              1488,
+              222
+            ]
+          ]
+        },
+        {
+          "text": "5",
+          "confidence": 0.25,
+          "bbox": [
+            [
+              249,
+              280
+            ],
+            [
+              254,
+              280
+            ],
+            [
+              254,
+              301
+            ],
+            [
+              249,
+              301
+            ]
+          ]
+        },
+        {
+          "text": "aa",
+          "confidence": 0.61,
+          "bbox": [
+            [
+              426,
+              295
+            ],
+            [
+              516,
+              295
+            ],
+            [
+              516,
+              323
+            ],
+            [
+              426,
+              323
+            ]
+          ]
+        },
+        {
+          "text": "Z",
+          "confidence": 0.67,
+          "bbox": [
+            [
+              1977,
+              299
+            ],
+            [
+              2000,
+              299
+            ],
+            [
+              2000,
+              318
+            ],
+            [
+              1977,
+              318
+            ]
+          ]
+        },
+        {
+          "text": "W%",
+          "confidence": 0.14,
+          "bbox": [
+            [
+              2073,
+              293
+            ],
+            [
+              2140,
+              293
+            ],
+            [
+              2140,
+              316
+            ],
+            [
+              2073,
+              316
+            ]
+          ]
+        },
+        {
+          "text": "ai:",
+          "confidence": 0.29,
+          "bbox": [
+            [
+              2267,
+              278
+            ],
+            [
+              2351,
+              278
+            ],
+            [
+              2351,
+              322
+            ],
+            [
+              2267,
+              322
+            ]
+          ]
+        },
+        {
+          "text": "ih",
+          "confidence": 0.34,
+          "bbox": [
+            [
+              238,
+              343
+            ],
+            [
+              251,
+              343
+            ],
+            [
+              251,
+              383
+            ],
+            [
+              238,
+              383
+            ]
+          ]
+        },
+        {
+          "text": "(DO",
+          "confidence": 0.0,
+          "bbox": [
+            [
+              410,
+              316
+            ],
+            [
+              519,
+              316
+            ],
+            [
+              519,
+              392
+            ],
+            [
+              410,
+              392
+            ]
+          ]
+        },
+        {
+          "text": "-KRIS",
+          "confidence": 0.0,
+          "bbox": [
+            [
+              585,
+              320
+            ],
+            [
+              800,
+              320
+            ],
+            [
+              800,
+              381
+            ],
+            [
+              585,
+              381
+            ]
+          ]
+        },
+        {
+          "text": "=",
+          "confidence": 0.89,
+          "bbox": [
+            [
+              879,
+              347
+            ],
+            [
+              886,
+              347
+            ],
+            [
+              886,
+              350
+            ],
+            [
+              879,
+              350
+            ]
+          ]
+        },
+        {
+          "text": "OPE",
+          "confidence": 0.83,
+          "bbox": [
+            [
+              952,
+              326
+            ],
+            [
+              1096,
+              326
+            ],
+            [
+              1096,
+              381
+            ],
+            [
+              952,
+              381
+            ]
+          ]
+        },
+        {
+          "text": "madu",
+          "confidence": 0.7,
+          "bbox": [
+            [
+              1173,
+              324
+            ],
+            [
+              1349,
+              324
+            ],
+            [
+              1349,
+              364
+            ],
+            [
+              1173,
+              364
+            ]
+          ]
+        }
+      ]
+    },
+    "easyocr": {
+      "confidence": 0.43868271270896214,
+      "regions_count": 127,
+      "processing_time": 62.972134828567505,
+      "status": "uncertain",
+      "raw_text_preview": "No\n08\nOkT\nKamis\nDate\nOkRIS\nn'pis\nmadu\n4\n9 A < V\n+ 2\nVe+ Ralal Orl F\nJauts S\nfer Gec ,6\nRama\nCamel\nJore 28\nGalsu\n4\n\u20ac\nPafe\nKb 1\n[tcasteren\n12\nmarco\n=\nsis\u00e2\nBon lyk\n+ m #\n28\nSore\n+nP\u0131s\nmadu\nFee\nes\nbatu\nIk\nIBan 6\nlee =\nCmorf gk\n2 Aruk +\nAr\u20ac_rat5\n[\nfzaQi\n1\nJSur\n4 Gaf\u00ed +\nt\nPeug 2 3l Elneo Cal\n2 pona# + 2 D",
+      "sample_regions": [
+        {
+          "text": "No",
+          "confidence": 0.8704819405358893
+        },
+        {
+          "text": "Kamis",
+          "confidence": 0.9493859753450546
+        },
+        {
+          "text": "OkT",
+          "confidence": 0.8440541625022888
+        },
+        {
+          "text": "08",
+          "confidence": 0.7725600883974809
+        },
+        {
+          "text": "Date",
+          "confidence": 0.9894426465034485
+        },
+        {
+          "text": "Ve+ Ralal Orl F",
+          "confidence": 0.038622235762437174
+        },
+        {
+          "text": "+ 2",
+          "confidence": 0.48862019181251526
+        },
+        {
+          "text": "9 A < V",
+          "confidence": 0.40831691479864085
+        },
+        {
+          "text": "OkRIS",
+          "confidence": 0.6468624562163499
+        },
+        {
+          "text": "madu",
+          "confidence": 0.9448704719543457
+        },
+        {
+          "text": "4",
+          "confidence": 0.3667713428457272
+        },
+        {
+          "text": "n'pis",
+          "confidence": 0.28058240402371554
+        },
+        {
+          "text": "I2(e",
+          "confidence": 0.143729567527771
+        },
+        {
+          "text": "fer Gec ,6",
+          "confidence": 0.29906083586199617
+        },
+        {
+          "text": "Jauts S",
+          "confidence": 0.36569214241809245
+        }
+      ]
+    },
+    "comparison": {
+      "winner_confidence": "easyocr",
+      "winner_regions": "tesseract",
+      "winner_speed": "tesseract"
+    }
+  },
+  "IMG_20261008_115737.jpg": {
+    "tesseract": {
+      "confidence": 0.3872077922077922,
+      "regions_count": 154,
+      "processing_time": 30.384097814559937,
+      "status": "uncertain",
+      "raw_text_preview": "ie: & \u00bb (ers as\n\nis Gnas J penit + V ah \u2019 f q\naf 5s A a ; as 3h Chass ; .\nif aan we Kale > GA \u201cA; fro + pea \\\n\nA.\n-\n\nnike\n\n. 28urw\nss Pia <Seww Me ta ae\nLS ae \u201ca af -a dt (ee A mt Min cy COWS (te\n\na + Pelee Le AY Foryon\n\nA\n\nif a\nq 4 = tie ee\nq Beatics sk tkukubmma 5k\n\na Ans Flot Rak 2k \u00a2 es Ss\n\n\u201cgi ",
+      "sample_regions": [
+        {
+          "text": "ie:",
+          "confidence": 0.45,
+          "bbox": [
+            [
+              3,
+              474
+            ],
+            [
+              39,
+              474
+            ],
+            [
+              39,
+              516
+            ],
+            [
+              3,
+              516
+            ]
+          ]
+        },
+        {
+          "text": "&",
+          "confidence": 0.72,
+          "bbox": [
+            [
+              99,
+              472
+            ],
+            [
+              129,
+              472
+            ],
+            [
+              129,
+              518
+            ],
+            [
+              99,
+              518
+            ]
+          ]
+        },
+        {
+          "text": "\u00bb",
+          "confidence": 0.0,
+          "bbox": [
+            [
+              336,
+              510
+            ],
+            [
+              347,
+              510
+            ],
+            [
+              347,
+              521
+            ],
+            [
+              336,
+              521
+            ]
+          ]
+        },
+        {
+          "text": "(ers",
+          "confidence": 0.63,
+          "bbox": [
+            [
+              378,
+              472
+            ],
+            [
+              489,
+              472
+            ],
+            [
+              489,
+              523
+            ],
+            [
+              378,
+              523
+            ]
+          ]
+        },
+        {
+          "text": "as",
+          "confidence": 0.37,
+          "bbox": [
+            [
+              516,
+              462
+            ],
+            [
+              598,
+              462
+            ],
+            [
+              598,
+              531
+            ],
+            [
+              516,
+              531
+            ]
+          ]
+        },
+        {
+          "text": "is",
+          "confidence": 0.36,
+          "bbox": [
+            [
+              328,
+              735
+            ],
+            [
+              372,
+              735
+            ],
+            [
+              372,
+              831
+            ],
+            [
+              328,
+              831
+            ]
+          ]
+        },
+        {
+          "text": "Gnas",
+          "confidence": 0.31,
+          "bbox": [
+            [
+              445,
+              733
+            ],
+            [
+              750,
+              733
+            ],
+            [
+              750,
+              869
+            ],
+            [
+              445,
+              869
+            ]
+          ]
+        },
+        {
+          "text": "J",
+          "confidence": 0.71,
+          "bbox": [
+            [
+              817,
+              739
+            ],
+            [
+              836,
+              739
+            ],
+            [
+              836,
+              792
+            ],
+            [
+              817,
+              792
+            ]
+          ]
+        },
+        {
+          "text": "penit",
+          "confidence": 0.29,
+          "bbox": [
+            [
+              892,
+              760
+            ],
+            [
+              1091,
+              760
+            ],
+            [
+              1091,
+              802
+            ],
+            [
+              892,
+              802
+            ]
+          ]
+        },
+        {
+          "text": "+",
+          "confidence": 0.51,
+          "bbox": [
+            [
+              1148,
+              762
+            ],
+            [
+              1159,
+              762
+            ],
+            [
+              1159,
+              785
+            ],
+            [
+              1148,
+              785
+            ]
+          ]
+        },
+        {
+          "text": "V",
+          "confidence": 0.7,
+          "bbox": [
+            [
+              1244,
+              760
+            ],
+            [
+              1267,
+              760
+            ],
+            [
+              1267,
+              783
+            ],
+            [
+              1244,
+              783
+            ]
+          ]
+        },
+        {
+          "text": "ah",
+          "confidence": 0.27,
+          "bbox": [
+            [
+              1342,
+              737
+            ],
+            [
+              1459,
+              737
+            ],
+            [
+              1459,
+              842
+            ],
+            [
+              1342,
+              842
+            ]
+          ]
+        },
+        {
+          "text": "\u2019",
+          "confidence": 0.0,
+          "bbox": [
+            [
+              2002,
+              737
+            ],
+            [
+              2015,
+              737
+            ],
+            [
+              2015,
+              746
+            ],
+            [
+              2002,
+              746
+            ]
+          ]
+        },
+        {
+          "text": "f",
+          "confidence": 0.49,
+          "bbox": [
+            [
+              2152,
+              708
+            ],
+            [
+              2155,
+              708
+            ],
+            [
+              2155,
+              713
+            ],
+            [
+              2152,
+              713
+            ]
+          ]
+        },
+        {
+          "text": "q",
+          "confidence": 0.86,
+          "bbox": [
+            [
+              2828,
+              649
+            ],
+            [
+              2870,
+              649
+            ],
+            [
+              2870,
+              735
+            ],
+            [
+              2828,
+              735
+            ]
+          ]
+        }
+      ]
+    },
+    "easyocr": {
+      "confidence": 0.39752749887878575,
+      "regions_count": 101,
+      "processing_time": 34.2263970375061,
+      "status": "uncertain",
+      "raw_text_preview": "08\nOKT\nkamis\nGuy ' +\nL\nT Fpr\u20ac $f\na 4\nNno\nQeveje\n#s\nCu+\n15 \nAnav\u0131\nna nif\nk) +\n^ 6\nAot_{ules Sufu ~Jhe\n+ vali 3\nVux 2\n(i.\nJSykv\n8+\n4\nThucue\nrali\nJony\nFGunr\nnf\nI5\nIlfzs\nhdle\u0131\n24 k\n1646u8\n=\nA\u0131\nk f\nSuku\nCoCelet\n4\npoltele_lF\nGuny\na`\nA8<\n(\n4\nAQua 6\n+\nl\n[\nS\u0131tr_Cancef l\nJexujos\n+kukub\u0131ma Sk\ncahu_Fle f\nRah 2l",
+      "sample_regions": [
+        {
+          "text": "kamis",
+          "confidence": 0.9768775700276514
+        },
+        {
+          "text": "OKT",
+          "confidence": 0.9630991423332932
+        },
+        {
+          "text": "08",
+          "confidence": 0.999887469769027
+        },
+        {
+          "text": "Guy ' +",
+          "confidence": 0.20049380281028034
+        },
+        {
+          "text": "1a [r",
+          "confidence": 0.4798240194740888
+        },
+        {
+          "text": "Qeveje",
+          "confidence": 0.07788197508301913
+        },
+        {
+          "text": "a 4",
+          "confidence": 0.17530150711536407
+        },
+        {
+          "text": "Nno",
+          "confidence": 0.21690338430883138
+        },
+        {
+          "text": "T Fpr\u20ac $f",
+          "confidence": 0.10689305879337639
+        },
+        {
+          "text": "L",
+          "confidence": 0.48861741694793537
+        },
+        {
+          "text": "#s",
+          "confidence": 0.12004695033626911
+        },
+        {
+          "text": "Cu+",
+          "confidence": 0.3348863056822281
+        },
+        {
+          "text": "Anav\u0131",
+          "confidence": 0.29243232413853254
+        },
+        {
+          "text": "na nif",
+          "confidence": 0.21234506992742408
+        },
+        {
+          "text": "k) +",
+          "confidence": 0.35768380761146545
+        }
+      ]
+    },
+    "comparison": {
+      "winner_confidence": "easyocr",
+      "winner_regions": "tesseract",
+      "winner_speed": "tesseract"
+    }
+  },
+  "IMG_20261008_115740.jpg": {
+    "tesseract": {
+      "confidence": 0.38862745098039214,
+      "regions_count": 102,
+      "processing_time": 14.994752883911133,
+      "status": "uncertain",
+      "raw_text_preview": "k \u2122arc~co 35% 4 AY\\* 1 ~ > > pc Ame Qe p,.\ni\n\u2018 oo DEN = x v + Aden | t A 0 Aw\nPA t Sot 5 Vestn 99 Lew Uno Oe 55)\na pic \u2014\nes 2) \u00a2 t G2 al )\n7 atl e $\na { QW: 2? ta t hvatk \\ Gat wal\n\\/ x a we \u00a9 Avyau aa! s AAS Des\n* j i ibd Sy re } | ae 3 f\n5 = Z a i ae \u2014\n~T ' PAA tet\n5 ny ; t J\nVY Uae < ms)\n",
+      "sample_regions": [
+        {
+          "text": "k",
+          "confidence": 0.5,
+          "bbox": [
+            [
+              547,
+              172
+            ],
+            [
+              571,
+              172
+            ],
+            [
+              571,
+              208
+            ],
+            [
+              547,
+              208
+            ]
+          ]
+        },
+        {
+          "text": "\u2122arc~co",
+          "confidence": 0.44,
+          "bbox": [
+            [
+              612,
+              172
+            ],
+            [
+              775,
+              172
+            ],
+            [
+              775,
+              189
+            ],
+            [
+              612,
+              189
+            ]
+          ]
+        },
+        {
+          "text": "35%",
+          "confidence": 0.66,
+          "bbox": [
+            [
+              844,
+              168
+            ],
+            [
+              890,
+              168
+            ],
+            [
+              890,
+              198
+            ],
+            [
+              844,
+              198
+            ]
+          ]
+        },
+        {
+          "text": "4",
+          "confidence": 0.84,
+          "bbox": [
+            [
+              958,
+              172
+            ],
+            [
+              965,
+              172
+            ],
+            [
+              965,
+              181
+            ],
+            [
+              958,
+              181
+            ]
+          ]
+        },
+        {
+          "text": "AY\\*",
+          "confidence": 0.3,
+          "bbox": [
+            [
+              1063,
+              170
+            ],
+            [
+              1132,
+              170
+            ],
+            [
+              1132,
+              185
+            ],
+            [
+              1063,
+              185
+            ]
+          ]
+        },
+        {
+          "text": "1",
+          "confidence": 0.33,
+          "bbox": [
+            [
+              1272,
+              186
+            ],
+            [
+              1275,
+              186
+            ],
+            [
+              1275,
+              195
+            ],
+            [
+              1272,
+              195
+            ]
+          ]
+        },
+        {
+          "text": "~",
+          "confidence": 0.0,
+          "bbox": [
+            [
+              1420,
+              199
+            ],
+            [
+              1423,
+              199
+            ],
+            [
+              1423,
+              204
+            ],
+            [
+              1420,
+              204
+            ]
+          ]
+        },
+        {
+          "text": ">",
+          "confidence": 0.75,
+          "bbox": [
+            [
+              1472,
+              188
+            ],
+            [
+              1475,
+              188
+            ],
+            [
+              1475,
+              191
+            ],
+            [
+              1472,
+              191
+            ]
+          ]
+        },
+        {
+          "text": ">",
+          "confidence": 0.43,
+          "bbox": [
+            [
+              1737,
+              207
+            ],
+            [
+              1740,
+              207
+            ],
+            [
+              1740,
+              210
+            ],
+            [
+              1737,
+              210
+            ]
+          ]
+        },
+        {
+          "text": "pc",
+          "confidence": 0.32,
+          "bbox": [
+            [
+              1831,
+              167
+            ],
+            [
+              1834,
+              167
+            ],
+            [
+              1834,
+              172
+            ],
+            [
+              1831,
+              172
+            ]
+          ]
+        },
+        {
+          "text": "Ame",
+          "confidence": 0.36,
+          "bbox": [
+            [
+              1992,
+              165
+            ],
+            [
+              2053,
+              165
+            ],
+            [
+              2053,
+              184
+            ],
+            [
+              1992,
+              184
+            ]
+          ]
+        },
+        {
+          "text": "Qe",
+          "confidence": 0.37,
+          "bbox": [
+            [
+              2169,
+              157
+            ],
+            [
+              2272,
+              157
+            ],
+            [
+              2272,
+              176
+            ],
+            [
+              2169,
+              176
+            ]
+          ]
+        },
+        {
+          "text": "p,.",
+          "confidence": 0.0,
+          "bbox": [
+            [
+              2325,
+              167
+            ],
+            [
+              2374,
+              167
+            ],
+            [
+              2374,
+              213
+            ],
+            [
+              2325,
+              213
+            ]
+          ]
+        },
+        {
+          "text": "i",
+          "confidence": 0.62,
+          "bbox": [
+            [
+              426,
+              280
+            ],
+            [
+              437,
+              280
+            ],
+            [
+              437,
+              303
+            ],
+            [
+              426,
+              303
+            ]
+          ]
+        },
+        {
+          "text": "\u2018",
+          "confidence": 0.13,
+          "bbox": [
+            [
+              366,
+              387
+            ],
+            [
+              377,
+              387
+            ],
+            [
+              377,
+              400
+            ],
+            [
+              366,
+              400
+            ]
+          ]
+        }
+      ]
+    },
+    "easyocr": {
+      "confidence": 0.31266610704435593,
+      "regions_count": 66,
+      "processing_time": 32.881022453308105,
+      "status": "uncertain",
+      "raw_text_preview": "40 Belu m\nd\u00ed taro\nros / dc\n27\nPrev\nteovno\n2Fnte r\n58\nYnur Co\n286\n+\n26\n0\n7 )\n43\nLua <\n' \n6\nVeUa\n90\nLoutha\nLV\naS S5k ]\na\n39*262\n62.= (\nMa Mor\n0\nobsas\nayor [\nPia\n1\nGa{ Yalos\n(Ho\nCleo\nIlz\nWn\nont\nTV\nPucul\n(49\nJon\n1 1\nIow\nCle\nIpamoe_+cUv\nUaLl +\nCufenes{Ckannvn\n1 L\n1on olor]\nwa (3)\n28 +\n1\n(\nuntuno\n{olok\nto",
+      "sample_regions": [
+        {
+          "text": "d\u00ed taro",
+          "confidence": 0.40771548977792343
+        },
+        {
+          "text": "40 Belu m",
+          "confidence": 0.7793235191656681
+        },
+        {
+          "text": "ros / dc",
+          "confidence": 0.08322272443277512
+        },
+        {
+          "text": "27",
+          "confidence": 0.23757205663696518
+        },
+        {
+          "text": "58",
+          "confidence": 0.34122064042265843
+        },
+        {
+          "text": "Prev",
+          "confidence": 0.3118693232536316
+        },
+        {
+          "text": "2Fnte r",
+          "confidence": 0.3503392989424316
+        },
+        {
+          "text": "teovno",
+          "confidence": 0.09186548143999082
+        },
+        {
+          "text": "26",
+          "confidence": 0.8954493917838521
+        },
+        {
+          "text": "Ynur Co",
+          "confidence": 0.3009270626584424
+        },
+        {
+          "text": "untuno",
+          "confidence": 0.43317491723320156
+        },
+        {
+          "text": "286",
+          "confidence": 0.14561005596061308
+        },
+        {
+          "text": "+",
+          "confidence": 0.49713818822516487
+        },
+        {
+          "text": "(",
+          "confidence": 0.4601847232994629
+        },
+        {
+          "text": "toa)",
+          "confidence": 0.35758447647094727
+        }
+      ]
+    },
+    "comparison": {
+      "winner_confidence": "tesseract",
+      "winner_regions": "tesseract",
+      "winner_speed": "tesseract"
+    }
+  }
+}
