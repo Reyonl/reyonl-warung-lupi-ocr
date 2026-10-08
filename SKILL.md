@@ -22,7 +22,17 @@ Phase 7 (Audit Trail) wraps all phases with a shared trace_id.
 | EasyOCR | Local/free | Handwriting, moderate accuracy |
 | Claude Vision | Cloud/paid | Production quality (set `ANTHROPIC_API_KEY`) |
 
-Auto-selects: if `ANTHROPIC_API_KEY` env is set, use Claude Vision; else use EasyOCR.
+| Auto-selects: gemini > claude > easyocr > tesseract priority.
+| If `GOOGLE_API_KEY` env is set, uses Gemini Vision; else if
+| `ANTHROPIC_API_KEY` set, uses Claude Vision; else local fallback. |
+
+## Gemini Vision (Production)
+- Model: `gemini-3.8-flash` (latest available)
+- Fallback models: `gemini-3.5-flash`, `gemini-3.7-flash`, `gemini-flash-latest`
+- Retry: 3 attempts with exponential backoff (1s, 2s, 4s)
+- Handles 503 (high demand), 404 (model retired), network errors
+- Cost: ~Rp 2,000/image (Google AI Pro plan includes quota)
+- API key: set `GOOGLE_API_KEY` env var (Google AI Studio)
 
 ## Quick Start
 
