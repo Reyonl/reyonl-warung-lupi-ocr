@@ -9,8 +9,8 @@ This engine is OPTIONAL — the pipeline falls back to Tesseract/EasyOCR
 when Gemini Vision is not configured.
 
 Environment variables:
-    GOOGLE_API_KEY — required for Gemini Vision
-    GEMINI_VISION_MODEL — model to use (default: gemini-2.0-flash)
+    GOOGLE_API_KEY     — required for Gemini Vision
+    GEMINI_VISION_MODEL — model to use (default: gemini-3.5-flash)
 
 Pricing (as of 2026-10, in IDR approx):
     gemini-2.0-flash:  Rp 0.60/token
@@ -49,9 +49,15 @@ class GeminiVisionEngine(EngineInterface):
     - Indonesian language context
     """
 
-    DEFAULT_MODEL = "gemini-3.8-flash"
-    # Fallback models to try if primary is unavailable (503, quota, etc.)
-    FALLBACK_MODELS = ["gemini-3.5-flash", "gemini-3.7-flash", "gemini-3.8-flash", "gemini-flash-latest"]
+    DEFAULT_MODEL = "gemini-3.5-flash"  # Most reliable; 3.8-flash often overloaded (503)
+    # Fallback models: reliable fast ones first, then slower/higher-quality
+    FALLBACK_MODELS = [
+        "gemini-3.5-flash",
+        "gemini-3.7-flash",
+        "gemini-3.6-flash",
+        "gemini-3.8-flash",
+        "gemini-flash-latest",
+    ]
 
     def __init__(self, api_key: Optional[str] = None, model: Optional[str] = None):
         self.api_key = api_key or os.environ.get("GOOGLE_API_KEY")
