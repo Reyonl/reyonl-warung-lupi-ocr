@@ -61,10 +61,14 @@ Foto Buku → [Phase 1] → [Phase 2] → [Phase 3] → [Phase 4] → [Phase 5] 
 |--------|------|----------|-------|------|-------|
 | Tesseract 5.5 | Local | ~0.30 | Fast (~3s) | Free | Good for development baseline |
 | EasyOCR 1.7 | Local | ~0.38-0.44 | Slow (~30-45s) | Free | Better for handwriting |
-| Claude Vision | Cloud | ~0.90+ | Fast (~5-10s) | ~$0.05/img | Production quality |
+| **Gemini Vision** | Cloud | ~0.90+ | Fast (~5-15s) | ~Rp 2.000/img | **Production — Google AI Pro** |
+| Claude Vision | Cloud | ~0.90+ | Fast (~5-10s) | ~$0.05/img | Alternative cloud option |
 
-For production use, **Claude Vision** (Sonnet 4.6) is recommended.
-Set `ANTHROPIC_API_KEY` environment variable to enable.
+For production use, **Gemini Vision** (gemini-2.0-flash) is recommended:
+- Set `GOOGLE_API_KEY` environment variable (from [Google AI Studio](https://aistudio.google.com/))
+- Works with Google AI Pro plan (no additional cost beyond Pro subscription)
+
+Claude Vision is an alternative (set `ANTHROPIC_API_KEY`).
 
 ## Quick Start
 
@@ -100,6 +104,7 @@ warung-lupi-ocr/
 │   │   ├── tesseract_engine.py  # Local Tesseract wrapper
 │   │   ├── easyocr_engine.py    # Local EasyOCR wrapper
 │   │   ├── claude_vision_engine.py  # Cloud Claude Vision (optional)
+│   │   ├── gemini_vision_engine.py  # Cloud Gemini Vision (production)
 │   │   └── __init__.py
 │   ├── interpreter/
 │   │   ├── service.py           # Phase 2: Interpretation
@@ -113,14 +118,26 @@ warung-lupi-ocr/
 │   ├── models/
 │   │   ├── scan_result.py       # Phase 1 data models
 │   │   └── __init__.py
-│   └── preprocess/
-│       └── processor.py         # Image preprocessing + symbol detection
+│   ├── preprocess/
+│   │   └── processor.py         # Image preprocessing + symbol detection
+│   ├── config.py                # OCRConfig, env vars, auto-detection
+│   └── audit/
+│       └── trail.py             # Phase 7: Audit trail (JSONL)
 ├── tessdata/
 │   └── ind.traineddata          # Indonesian language for Tesseract
 ├── scripts/
 │   ├── test_pipeline.py         # Integration test
 │   ├── benchmark.py             # Engine comparison
 │   └── _test_ocr_output.json    # Generated test output
+├── eval/                        # Evaluation & improvement toolkit
+│   ├── run_eval.py              # Evaluation harness (CER/WER/metrics)
+│   ├── preprocess.py            # 8-step preprocessing module
+│   ├── correct.py               # Post-OCR correction (date/price/qty parser)
+│   ├── test_correct.py          # 27 unit tests for correction module
+│   ├── ground_truth/            # Ground truth JSON files
+│   ├── debug/                   # Debug images per preprocessing step
+│   └── reports/                 # Evaluation reports (JSON)
+├── config.example.json          # Config file template
 ├── requirements.txt
 └── README.md
 ```

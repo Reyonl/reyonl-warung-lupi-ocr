@@ -87,6 +87,59 @@ class EngineService:
         self.engines: List[EngineInterface] = []
         self.processor = ImageProcessor()
 
+    def auto_register_default_engines(self, config: Optional["OCRConfig"] = None) -> None:
+        """
+        Auto-register all available OCR engines based on configuration.
+        - Gemini Vision (if GOOGLE_API_KEY)
+        - Claude Vision (if ANTHROPIC_API_KEY)
+        - EasyOCR (if installed)
+        - Tesseract (if binary found)
+        """
+        from src.engines.tesseract_engine import TesseractEngine
+        from src.engines.easyocr_engine import EasyOCREngine
+
+        # Try EasyOCR
+        try:
+            easy = EasyOCREngine()
+            if easy.is_available():
+                self.register_engine(easy)
+        except Exception as e:
+            logger.warning(f"EasyOCR registration failed: {e}")
+
+        # Try Tesseract
+        try:
+            tess = TesseractEngine()
+            if tess.is_available():
+                self.register_engine(tess)
+        except Exception as e:
+            logger.warning(f"Tesseract registration failed: {e}")
+
+        # Try Gemini Vision (if config has API key)
+        if config and config.engine.google_api_key:
+            try:
+                from src.engines.gemini_vision_engine import GeminiVisionEngine
+                gemini = GeminiVisionEngine(
+                    api_key=config.engine.google_api_key,
+                    model=config.engine.gemini_model
+                )
+                if gemini.is_available():
+                    self.register_engine(gemini)
+            except Exception as e:
+                logger.warning(f"Gemini Vision registration failed: {e}")
+
+        # Try Claude Vision (if config has API key)
+        if config and config.engine.anthropic_api_key:
+            try:
+                from src.engines.claude_vision_engine import ClaudeVisionEngine
+                claude = ClaudeVisionEngine(
+                    api_key=config.engine.anthropic_api_key,
+                    model=config.engine.claude_model
+                )
+                if claude.is_available():
+                    self.register_engine(claude)
+            except Exception as e:
+                logger.warning(f"Claude Vision registration failed: {e}")
+
     def register_engine(self, engine: EngineInterface) -> None:
         """Register an OCR engine."""
         self.engines.append(engine)
@@ -174,11 +227,23 @@ class EngineService:
         target_engine: Optional[EngineInterface] = None
 
         if engine == "auto":
-            # Pick first available engine (priority: easyocr > tesseract > others)
-            for e in self.engines:
-                if e.is_available():
-                    target_engine = e
+            # Auto-select: prioritize by accuracy (cloud first if configured)
+            # Priority: gemini-vision > claude-vision > easyocr > tesseract > others
+            auto_priority = ["gemini", "claude", "easyocr", "tesseract", "anthropic"]
+            for prefix in auto_priority:
+                for e in self.engines:
+                    engine_name = e.name().lower()
+                    if engine_name.startswith(prefix) and e.is_available():
+                        target_engine = e
+                        break
+                if target_engine:
                     break
+            # Fallback: any available engine
+            if target_engine is None:
+                for e in self.engines:
+                    if e.is_available():
+                        target_engine = e
+                        break
             if target_engine is None:
                 return ScanResult(
                     status="error",

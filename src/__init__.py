@@ -3,8 +3,8 @@ Warung Lupi OCR Engine package.
 
 Public API:
     from src import (
-        EngineService, TesseractEngine, EasyOCREngine,
-        InterpretationService, InterpretedResult,
+        EngineService, TesseractEngine, EasyOCREngine, ClaudeVisionEngine,
+        GeminiVisionEngine, InterpretationService, InterpretedResult,
         DraftTransactionService, DraftTransaction,
         OCRConfig, AuditTrail,
         WarungLupiAPIClient,
@@ -38,6 +38,7 @@ from src.engine.engine_service import EngineService, EngineConfig, EngineInterfa
 from src.engines.tesseract_engine import TesseractEngine
 from src.engines.easyocr_engine import EasyOCREngine
 from src.engines.claude_vision_engine import ClaudeVisionEngine
+from src.engines.gemini_vision_engine import GeminiVisionEngine
 from src.interpreter.service import (
     InterpretationService,
     InterpretedResult,
@@ -69,6 +70,7 @@ __all__ = [
     "TesseractEngine",
     "EasyOCREngine",
     "ClaudeVisionEngine",
+    "GeminiVisionEngine",
     "InterpretationService",
     "InterpretedResult",
     "InterpretedItem",

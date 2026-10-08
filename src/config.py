@@ -34,8 +34,13 @@ logger = logging.getLogger(__name__)
 class EngineConfig:
     """OCR engine configuration."""
     # Which engine to use
-    preferred_engine: str = "auto"  # "auto" | "tesseract" | "easyocr" | "claude-vision"
-    # Claude Vision (cloud, optional)
+    # "auto" = Claude Vision if key set, else EasyOCR if available, else Tesseract
+    # "local" = force local engine (Tesseract/EasyOCR) — for cost optimization
+    preferred_engine: str = "auto"
+    # Google Gemini Vision (cloud, optional — production quality)
+    google_api_key: Optional[str] = None
+    gemini_model: str = "gemini-2.0-flash"
+    # Anthropic Claude Vision (cloud, optional — alternative production option)
     anthropic_api_key: Optional[str] = None
     claude_model: str = "claude-3-5-sonnet-20241022"
     # Tesseract
@@ -44,6 +49,8 @@ class EngineConfig:
     tessdata_dir: str = ""
     # EasyOCR
     easyocr_languages: list = field(default_factory=lambda: ["en", "id"])
+    # Cloud fallback confidence threshold — if local OCR below this, use cloud
+    cloud_fallback_threshold: float = 0.45
 
 
 @dataclass
@@ -114,7 +121,7 @@ class OCRConfig:
 
         # Load from file
         if config_path is None:
-            config_path = cls._find_config_file()
+            config_path = cls._find_config_file() if hasattr(cls, '_find_config_file') else None
 
         if config_path and os.path.exists(config_path):
             try:
@@ -128,8 +135,10 @@ class OCRConfig:
         # Override with environment variables (highest priority)
         env_map = {
             "WLOCR_ENGINE": ("engine", "preferred_engine"),
-            "WLOCR_CLAUDE_KEY": ("engine", "anthropic_api_key"),
-            "WLOCR_CLUDE_MODEL": ("engine", "claude_model"),
+            "GOOGLE_API_KEY": ("engine", "google_api_key"),
+            "GEMINI_VISION_MODEL": ("engine", "gemini_model"),
+            "ANTHROPIC_API_KEY": ("engine", "anthropic_api_key"),
+            "CLAUDE_VISION_MODEL": ("engine", "claude_model"),
             "WLOCR_TESSERACT_CMD": ("engine", "tesseract_cmd"),
             "WLOCR_API_URL": ("api", "base_url"),
             "WLOCR_API_TOKEN": ("api", "api_token"),
@@ -181,7 +190,8 @@ class OCRConfig:
                     if hasattr(target, key):
                         setattr(target, key, val)
 
-    def _find_config_file(self) -> Optional[str]:
+    @staticmethod
+    def _find_config_file() -> Optional[str]:
         """Find config file in common locations."""
         candidates = [
             os.environ.get("WLOCR_CONFIG"),
@@ -216,6 +226,15 @@ class OCRConfig:
                 import easyocr  # type: ignore
             except ImportError:
                 issues.append("EasyOCR configured but 'easyocr' package not installed")
+
+        elif self.engine.preferred_engine in ("gemini-vision", "gemini"):
+            if not self.engine.google_api_key:
+                issues.append("Gemini Vision selected but GOOGLE_API_KEY not set")
+            else:
+                try:
+                    import google.genai  # type: ignore
+                except ImportError:
+                    issues.append("Gemini Vision selected but 'google-genai' package not installed")
 
         elif self.engine.preferred_engine == "claude-vision":
             if not self.engine.anthropic_api_key:

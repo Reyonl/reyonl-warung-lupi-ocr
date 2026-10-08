@@ -4,6 +4,13 @@ pytesseract>=0.3.10
 opencv-python>=4.9.0.80
 pillow>=10.0.0
 numpy>=1.26.0
-# For production OCR (Claude Vision):
-# Set ANTHROPIC_API_KEY env var to enable
+scikit-learn>=1.3.0
+
+# Production OCR engines (optional):
+# Google Gemini Vision — best accuracy for Indonesian handwriting
+# Set GOOGLE_API_KEY env var, then uncomment:
+# google-genai>=0.8.0
+
+# Anthropic Claude Vision (alternative cloud engine)
+# Set ANTHROPIC_API_KEY env var, then uncomment:
 # anthropic>=0.34.0
