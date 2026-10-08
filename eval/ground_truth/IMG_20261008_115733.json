@@ -1,32 +1,54 @@
 {
   "image": "IMG_20261008_115733.jpg",
-  "date": "2026-10-08",
-  "customer": "Marco",
-  "lines": [
-    "1 TS —— ea 5. x 5 Au UV big Vit, Zalakl rev 5",
-    "| KRIS : Pu au. 4 2 Aa",
-    "ad ma Yan AA) kans V3 So kuy (Ec Gerv AA D- 5",
-    "1 j 2) Kama KAA SOrE: SA A4 Gal du dd UV Paket KE . ad P",
-    "j 3. Marco - SISA Lon luk FM 1 S0re A4 NIPDIS Madu & La 3 N",
-    "| es batu Ik Zi",
-    "Z Pang lee Cimerg Jk 4 2 Amal 4 Ane rd 4 iRati KILAUA",
-    "| Anak 1 beyg234 Finkecafj : 9 Donat 4 2 Pasok AnnG Buc2 Dt",
-    "Do Gi pr Gef D Ae let daki Tki Dian IT",
-    "2 Mau » Wiu melau 201 T MamiF 4 Malkaoni Fe Tuilku",
-    "TT Sandy 2 lanihn bela ai RaRa KA maa TU |",
-    "3- Tejo: Relak 4 1 ke 3 Hita KI",
-    "4.iTom Di Ae i |",
-    "ci lunas",
-    "AB NI M1 Rak 313 Ama Kk."
-  ],
-  "items": [
+  "date": "08 OKT",
+  "currency": "IDR",
+  "sections": [
     {
-      "product": "Madu",
-      "qty": 1,
-      "unit_price": 15000,
-      "struck": false
+      "customer": "KRIS",
+      "items": [
+        {
+          "product": "Madu",
+          "quantity": 3,
+          "unit_price": 5000,
+          "raw_line": "nipis madu"
+        },
+        {
+          "product": "Aqua B",
+          "quantity": 2,
+          "unit_price": 0,
+          "raw_line": "2 Aqua B"
+        },
+        {
+          "product": "Rokok",
+          "quantity": 3,
+          "unit_price": 35000,
+          "raw_line": "3 bks Rokok 105k"
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 25000,
+          "raw_line": "gorengan 25k"
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "kopi"
+        },
+        {
+          "product": "Kopi",
+          "quantity": 2,
+          "unit_price": 0,
+          "raw_line": "2 kopi"
+        },
+        {
+          "product": "Es Cream",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "Es Cream 3k"
+        }
+      ]
     }
-  ],
-  "notes": "EasyOCR detected: OKT, kamis, Rama, madu, makan, 02, 08, 2, 3, 42, 182",
-  "source": "draft_from_ocr_analysis_needs_verification"
+  ]
 }
