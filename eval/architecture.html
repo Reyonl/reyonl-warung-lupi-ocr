@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Warung Lupi OCR — Architecture Overview</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; padding: 24px; background: #07090d; color: #e4e7eb; }
+  h1 { color: #63B3FF; font-size: 24px; margin-bottom: 4px; }
+  .subtitle { color: #8a8a8a; margin-bottom: 24px; font-size: 14px; }
+  .pipeline { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+  .phase { display: flex; align-items: center; gap: 12px; }
+  .step { background: #1a1c24; border: 1px solid #333; border-radius: 8px; padding: 16px; flex: 1; transition: all 0.2s; }
+  .step:hover { border-color: #63B3FF; transform: translateY(-2px); }
+  .step.active { border-color: #63B3FF; box-shadow: 0 0 12px rgba(99,179,255,0.1); }
+  .step-num { background: #63B3FF; color: #000; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; flex-shrink: 0; }
+  .step-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .step-desc { font-size: 12px; color: #8a8a8a; line-height: 1.4; }
+  .arrow { color: #63B3FF; font-size: 18px; flex-shrink: 0; }
+  .engine-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .engine-table th { background: #1a1c24; color: #63B3FF; padding: 8px 12px; font-size: 12px; text-align: left; }
+  .engine-table td { padding: 8px 12px; border-bottom: 1px solid #333; font-size: 13px; }
+  .engine-table tr:hover { background: #22242c; }
+  .engine-prod { color: #00ff88; font-weight: bold; }
+  .engine-free { color: #63B3FF; }
+  .results { background: #1a1c24; border-radius: 8px; padding: 16px; margin-top: 20px; }
+  .results h2 { color: #63B3FF; font-size: 18px; margin-top: 0; }
+  .results-table { width: 100%; border-collapse: collapse; }
+  .results-table th { color: #63B3FF; padding: 6px; font-size: 12px; text-align: left; }
+  .results-table td { padding: 6px; border-bottom: 1px solid #333; font-size: 12px; }
+  .badge-ok { background: #00ff8822; color: #00ff88; padding: 2px 8px; border-radius: 4px; font-size: 11px; }
+  .badge-fail { background: #ff444422; color: #ff4444; padding: 2px 8px; border-radius: 4px; font-size: 11px; }
+  .todo { background: #2a2a2a; border-left: 3px solid #ffaa00; padding: 12px 16px; margin-top: 20px; border-radius: 4px; }
+  .todo h3 { color: #ffaa00; margin: 0 0 8px 0; font-size: 14px; }
+  .todo ul { margin: 0; padding-left: 20px; color: #aaa; font-size: 13px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<h1>Warung Lupi OCR Engine — Architecture</h1>
+<p class="subtitle">reyonl/reyonl-warung-lupi-ocr • 10 commits • Google AI Pro compatible</p>
+
+<div class="pipeline">
+  <div class="phase">
+    <div class="step-num">1</div>
+    <div class="step active">
+      <div class="step-title">OCR Engine (Image Understanding)</div>
+      <div class="step-desc">Tesseract (local/free) • EasyOCR (local/free) • <span class="engine-prod">Gemini Vision</span> (cloud/production)</div>
+    </div>
+  </div>
+  <div class="phase">
+    <div class="arrow">→</div>
+    <div class="step active">
+      <div class="step-title">Pre-processing (LANGKAH 1)</div>
+      <div class="step-desc">Auto-rotate, deskew, CLAHE, denoise, remove ruled lines, binarize, upscale — 8 steps, all toggleable</div>
+    </div>
+  </div>
+  <div class="phase">
+    <div class="step-num">2</div>
+    <div class="step active">
+      <div class="step-title">Interpretation (Phase 2-4)</div>
+      <div class="step-desc">Line clustering, date parsing, customer detection, item parsing, product & customer fuzzy matching</div>
+    </div>
+  </div>
+  <div class="phase">
+    <div class="arrow">→</div>
+  </div>
+  <div class="phase">
+    <div class="step-num">5</div>
+    <div class="step active">
+      <div class="step-title">Post-OCR Correction (LANGKAH 5)</div>
+      <div class="step-desc">Character confusion map (0↔O, 1↔l, 5↔S) • Date parser (8 formats) • Price parser (8 notations) • Product/customer lexicon matching • Noise filtering</div>
+    </div>
+  </div>
+  <div class="phase">
+    <div class="arrow">→</div>
+  </div>
+  <div class="phase">
+    <div class="step-num">6</div>
+    <div class="step">
+      <div class="step-title">Draft Transaction + UI</div>
+      <div class="step-desc">Editable draft • Phase 9 confirms via Laravel API • Phase 7 audit trail (JSONL)</div>
+    </div>
+  </div>
+</div>
+
+<h2 style="color: #63B3FF; font-size: 18px;">Engines</h2>
+<table class="engine-table">
+  <tr><th>Engine</th><th>Type</th><th>Role</th><th>Accuracy</th><th>Speed</th><th>Cost</th></tr>
+  <tr><td>Tesseract 5.5</td><td class="engine-free">Local</td><td>Development</td><td>~0.30</td><td>~3s</td><td>Free</td></tr>
+  <tr><td>EasyOCR 1.7</td><td class="engine-free">Local</td><td>Development</td><td>~0.38-0.44</td><td>~30-45s</td><td>Free</td></tr>
+  <tr><td><span class="engine-prod">Gemini Vision</span></td><td>Cloud</td><td><span class="engine-prod">Production</span></td><td>~0.90+</td><td>~5-15s</td><td>~Rp 2k/img</td></tr>
+  <tr><td>Claude Vision</td><td>Cloud</td><td>Alternative</td><td>~0.90+</td><td>~5-10s</td><td>$0.05/img</td></tr>
+</table>
+
+<h2 style="color: #63B3FF; font-size: 18px;">Baseline Results (Tesseract PSM6+OEM1)</h2>
+<table class="results-table">
+  <tr><th>Image</th><th>Date</th><th>Product</th><th>Time</th><th>Note</th></tr>
+  <tr>
+    <td>IMG_115733</td>
+    <td><span class="badge-ok">✓</span></td>
+    <td><span class="badge-ok">Madu ✓</span></td>
+    <td>2.9s</td>
+    <td>OKT 08 detected, Madu matched</td>
+  </tr>
+  <tr>
+    <td>IMG_115737</td>
+    <td><span class="badge-fail">✗</span></td>
+    <td><span class="badge-fail">none</span></td>
+    <td>2.5s</td>
+    <td>Noise too high</td>
+  </tr>
+  <tr>
+    <td>IMG_115740</td>
+    <td><span class="badge-fail">✗</span></td>
+    <td><span class="badge-fail">none</span></td>
+    <td>3.3s</td>
+    <td>Noise too high</td>
+  </tr>
+</table>
+
+<div class="todo">
+  <h3>🎯 Next Steps (need user action)</h3>
+  <ul>
+    <li>Set <code>GOOGLE_API_KEY</code> from <a href="https://aistudio.google.com/" style="color:#63B3FF">Google AI Studio</a> — enables Gemini Vision (production accuracy)</li>
+    <li>Koreksi ground truth di <code>eval/ground_truth/*.json</code> — verifikasi date/customer/items sesuai gambar asli</li>
+    <li>LANGKAH 2-4: Line segmentation + column detection (improves OCR per-line accuracy)</li>
+    <li>LANGKAH 6: Enhanced product/customer matching (trigram + phonetic)</li>
+    <li>LANGKAH 8: Full hybrid pipeline — local first, Gemini fallback on low confidence</li>
+  </ul>
+</div>
+
+</body>
+</html>
