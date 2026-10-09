@@ -1,31 +1,616 @@
 {
   "image": "IMG_20261008_115737.jpg",
-  "date": "2026-10-08",
-  "customer": null,
-  "lines": [
-    ".",
-    "1 M4. Park, 4x Kake 5 GI MAL 4 kaki WA Mou. .2 AA )",
-    "Suca | L",
-    "5 1G Ikfenu gs Tjucuk 4 TEA 4 mia aya naa MP. v LUSA |",
-    "— MEA Gue - An Kd Satu Colueh - j",
-    "———— BEA Tnhus G5 Abe, Ep 1 tele LG 23: Budha II",
-    "u Jap ie EGa TN are Caneetk AAA Naud 1 NO Pi",
-    "—— Mesmgos sk Kurama Sk :",
-    "B |eimagasar lapis Sk AA SURA PMA) Le Me Aa aa",
-    ". Ba L nada : katy at",
-    "2 Sama aa an",
-    "B I5o mma ba Ie Ay Su PETA",
-    "T Hi: MG U Tam : berga. PU p4 uga KA",
-    "“2: Iu Auug 5 Awak MA Ad 1 ia"
-  ],
-  "items": [
+  "date": "8 OKTOBER",
+  "currency": "IDR",
+  "width": 3072,
+  "height": 4096,
+  "sections": [
     {
-      "product": "TEH",
-      "qty": 1,
-      "unit_price": 4000,
-      "struck": false
+      "customer": "Unknown",
+      "items": [
+        {
+          "product": "Surya",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "surya 12",
+          "bbox": [
+            2394.89,
+            402.41,
+            324.07,
+            115.74
+          ]
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 12000,
+          "raw_line": "gorengan 12 ribu",
+          "bbox": [
+            1929.27,
+            449.6,
+            493.22,
+            92.59
+          ]
+        },
+        {
+          "product": "Teh Tarik Susu",
+          "quantity": 1,
+          "unit_price": 8000,
+          "raw_line": "teh tarik susu 8 ribu",
+          "bbox": [
+            944.04,
+            452.94,
+            514.53,
+            88.3
+          ]
+        },
+        {
+          "product": "Aqua",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "aqua besar",
+          "bbox": [
+            1426.96,
+            475.29,
+            342.3,
+            113.37
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Risky",
+      "items": [
+        {
+          "product": "Es Susu",
+          "quantity": 1,
+          "unit_price": 6000,
+          "raw_line": "es susu 6 ribu",
+          "bbox": [
+            574.87,
+            577.49,
+            427.34,
+            112.18
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Mama Sasa",
+      "items": [
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "kopi",
+          "bbox": [
+            1809.77,
+            747.6,
+            79.39,
+            66.16
+          ]
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "kopi",
+          "bbox": [
+            1312.07,
+            771.66,
+            220.73,
+            143.15
+          ]
+        },
+        {
+          "product": "Teh Manis",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "teh manis",
+          "bbox": [
+            960.22,
+            783.99,
+            321.78,
+            99.24
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Andres",
+      "items": [
+        {
+          "product": "Kue",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "kue 3 ribu",
+          "bbox": [
+            1954.68,
+            968.39,
+            260.92,
+            84.78
+          ]
+        },
+        {
+          "product": "Roti",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "roti 3 ribu",
+          "bbox": [
+            1651.72,
+            990.2,
+            262.06,
+            81.61
+          ]
+        },
+        {
+          "product": "Susu Jahe",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "susu jahe",
+          "bbox": [
+            1243.1,
+            1022.96,
+            434.17,
+            100.49
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Pak Ade Lele",
+      "items": [
+        {
+          "product": "Teajus",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "teajus",
+          "bbox": [
+            2637.66,
+            1256.93,
+            274.66,
+            102.83
+          ]
+        },
+        {
+          "product": "Sosis",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "sosis 1",
+          "bbox": [
+            2212.82,
+            1285.34,
+            293.6,
+            70.36
+          ]
+        },
+        {
+          "product": "Roti",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "roti 3 ribu",
+          "bbox": [
+            1414.55,
+            1305.98,
+            186.71,
+            115.68
+          ]
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "gorengan 4",
+          "bbox": [
+            1812.33,
+            1332.7,
+            426.19,
+            124.48
+          ]
+        },
+        {
+          "product": "Teh Pucuk Jaki",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "teh pucuk jaki",
+          "bbox": [
+            1031.66,
+            1342.17,
+            358.54,
+            86.59
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Irfan",
+      "items": [
+        {
+          "product": "Susu Coklat",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "susu coklat",
+          "bbox": [
+            1479.5,
+            1577.59,
+            564.2,
+            78.47
+          ]
+        },
+        {
+          "product": "Aqua Kecil",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "aqua k",
+          "bbox": [
+            936.61,
+            1592.13,
+            387.63,
+            135.98
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Agus",
+      "items": [
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "gorengan 4",
+          "bbox": [
+            2482.07,
+            1778.85,
+            296.31,
+            131.92
+          ]
+        },
+        {
+          "product": "Rokok Surya",
+          "quantity": 1,
+          "unit_price": 38000,
+          "raw_line": "rokok surya 16 38 ribu",
+          "bbox": [
+            1970.97,
+            1802.53,
+            520.23,
+            73.74
+          ]
+        },
+        {
+          "product": "Aqua",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "aqua besar",
+          "bbox": [
+            1423.35,
+            1840.75,
+            350.43,
+            77.12
+          ]
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "kopi",
+          "bbox": [
+            2559.86,
+            1881.68,
+            171.83,
+            73.74
+          ]
+        },
+        {
+          "product": "Aqua",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "aqua besar",
+          "bbox": [
+            2238.53,
+            1893.51,
+            271.95,
+            85.24
+          ]
+        },
+        {
+          "product": "Sapri Camel",
+          "quantity": 1,
+          "unit_price": 34000,
+          "raw_line": "sapri camel 34 ribu",
+          "bbox": [
+            1671.96,
+            1921.25,
+            665.0,
+            63.59
+          ]
+        },
+        {
+          "product": "Aqua Kecil",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "aqua k",
+          "bbox": [
+            1116.22,
+            1955.07,
+            296.31,
+            66.3
+          ]
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 15000,
+          "raw_line": "gorengan 15 ribu",
+          "bbox": [
+            476.25,
+            1980.78,
+            453.25,
+            93.36
+          ]
+        },
+        {
+          "product": "Kukubima",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "kukubima 5 ribu",
+          "bbox": [
+            1107.09,
+            2045.05,
+            464.75,
+            96.06
+          ]
+        },
+        {
+          "product": "",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "5k",
+          "bbox": [
+            740.09,
+            2060.95,
+            132.59,
+            75.09
+          ]
+        },
+        {
+          "product": "Extrajoss",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "extrajoss",
+          "bbox": [
+            464.08,
+            2069.4,
+            315.25,
+            63.59
+          ]
+        },
+        {
+          "product": "Es",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "es 5 ribu",
+          "bbox": [
+            2745.9,
+            2143.82,
+            263.83,
+            58.18
+          ]
+        },
+        {
+          "product": "Roti",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "roti 3 ribu",
+          "bbox": [
+            2356.24,
+            2167.16,
+            296.31,
+            100.8
+          ]
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": 7000,
+          "raw_line": "kopi double 7 ribu",
+          "bbox": [
+            1798.8,
+            2198.61,
+            646.73,
+            102.83
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Doni 2 Kopi Biasa 8 Ribu",
+      "items": [
+        {
+          "product": "Susu Bonteh",
+          "quantity": 1,
+          "unit_price": 8000,
+          "raw_line": "susu bonteh 8 ribu",
+          "bbox": [
+            1405.08,
+            2307.19,
+            687.32,
+            60.21
+          ]
+        },
+        {
+          "product": "Lapis",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "lapis 5 ribu",
+          "bbox": [
+            807.4,
+            2350.83,
+            348.4,
+            110.95
+          ]
+        },
+        {
+          "product": "Aqua",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "aqua besar",
+          "bbox": [
+            2382.28,
+            2527.39,
+            328.1,
+            110.95
+          ]
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 7000,
+          "raw_line": "gorengan 7 ribu",
+          "bbox": [
+            1856.64,
+            2570.35,
+            541.87,
+            140.03
+          ]
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "kopi",
+          "bbox": [
+            1236.97,
+            2617.7,
+            249.63,
+            129.21
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Yudi Frozen",
+      "items": [
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 8000,
+          "raw_line": "gorengan 8 ribu",
+          "bbox": [
+            1997.21,
+            2891.05,
+            518.8,
+            167.63
+          ]
+        },
+        {
+          "product": "Air Putih",
+          "quantity": 1,
+          "unit_price": 2000,
+          "raw_line": "air putih 2 ribu",
+          "bbox": [
+            1400.82,
+            2925.43,
+            594.37,
+            102.7
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Iwan Frozen",
+      "items": [
+        {
+          "product": "Teajus",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "teajus",
+          "bbox": [
+            2592.93,
+            3188.11,
+            265.23,
+            137.92
+          ]
+        },
+        {
+          "product": "Nasgor",
+          "quantity": 1,
+          "unit_price": 12000,
+          "raw_line": "nasgor 12 ribu",
+          "bbox": [
+            2109.67,
+            3214.11,
+            629.14,
+            132.62
+          ]
+        },
+        {
+          "product": "Energen Balls",
+          "quantity": 1,
+          "unit_price": 6000,
+          "raw_line": "energen balls 6 ribu",
+          "bbox": [
+            1402.56,
+            3250.71,
+            679.0,
+            97.61
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Mbak Tami",
+      "items": [
+        {
+          "product": "Teh Tubruk",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "teh tubruk",
+          "bbox": [
+            2948.34,
+            3468.37,
+            247.31,
+            102.49
+          ]
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 4,
+          "unit_price": 0,
+          "raw_line": "gorengan 4 biji",
+          "bbox": [
+            2433.48,
+            3531.28,
+            657.43,
+            133.32
+          ]
+        },
+        {
+          "product": "Tempe",
+          "quantity": 2,
+          "unit_price": 0,
+          "raw_line": "2 tempe",
+          "bbox": [
+            1706.9,
+            3576.69,
+            549.11,
+            189.15
+          ]
+        },
+        {
+          "product": "Aqua Kecil",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "aqua k",
+          "bbox": [
+            1196.54,
+            3606.69,
+            303.3,
+            149.15
+          ]
+        }
+      ]
     }
-  ],
-  "notes": "EasyOCR detected: kamis, Sore, Bon, Rama, madu, 4, 3, 2, 10",
-  "source": "draft_from_ocr_analysis_needs_verification"
+  ]
 }

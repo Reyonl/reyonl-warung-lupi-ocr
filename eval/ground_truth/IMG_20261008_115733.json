@@ -4,49 +4,190 @@
   "currency": "IDR",
   "sections": [
     {
-      "customer": "KRIS",
+      "customer": "Unknown",
       "items": [
         {
           "product": "Madu",
-          "quantity": 3,
-          "unit_price": 5000,
-          "raw_line": "nipis madu"
-        },
-        {
-          "product": "Aqua B",
-          "quantity": 2,
+          "quantity": 1,
           "unit_price": 0,
-          "raw_line": "2 Aqua B"
+          "raw_line": "nipis madu",
+          "bbox": [
+            1680.49,
+            341.35,
+            385.11,
+            94.53
+          ]
         },
         {
-          "product": "Rokok",
-          "quantity": 3,
-          "unit_price": 35000,
-          "raw_line": "3 bks Rokok 105k"
+          "product": "Madu",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "nipis madu",
+          "bbox": [
+            1153.59,
+            345.43,
+            416.62,
+            67.69
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Kris",
+      "items": [
+        {
+          "product": "Es Cincau",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "es jasjus cincau 3 ribu",
+          "bbox": [
+            2049.5,
+            413.03,
+            513.7,
+            67.9
+          ]
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "kopi",
+          "bbox": [
+            1547.45,
+            423.04,
+            266.08,
+            82.86
+          ]
         },
         {
           "product": "Gorengan",
           "quantity": 1,
           "unit_price": 25000,
-          "raw_line": "gorengan 25k"
+          "raw_line": "gorengan 25 ribu",
+          "bbox": [
+            668.69,
+            430.04,
+            574.17,
+            117.87
+          ]
         },
         {
           "product": "Kopi",
           "quantity": 1,
           "unit_price": 0,
-          "raw_line": "kopi"
+          "raw_line": "kopi",
+          "bbox": [
+            1195.01,
+            443.46,
+            289.42,
+            95.69
+          ]
+        },
+        {
+          "product": "Teh Botol",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "teh botol",
+          "bbox": [
+            1905.99,
+            576.41,
+            323.97,
+            80.99
+          ]
         },
         {
           "product": "Kopi",
-          "quantity": 2,
+          "quantity": 1,
           "unit_price": 0,
-          "raw_line": "2 kopi"
+          "raw_line": "kopi",
+          "bbox": [
+            2296.58,
+            583.61,
+            228.6,
+            158.96
+          ]
         },
         {
-          "product": "Es Cream",
+          "product": "Golda",
           "quantity": 1,
-          "unit_price": 3000,
-          "raw_line": "Es Cream 3k"
+          "unit_price": 0,
+          "raw_line": "golda",
+          "bbox": [
+            1529.03,
+            585.5,
+            237.68,
+            99.16
+          ]
+        },
+        {
+          "product": "Rokok",
+          "quantity": 1,
+          "unit_price": 28000,
+          "raw_line": "rokok camel ungu28 ribu",
+          "bbox": [
+            1068.81,
+            590.42,
+            519.27,
+            93.86
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Marco",
+      "items": [
+        {
+          "product": "Cimory",
+          "quantity": 1,
+          "unit_price": 9000,
+          "raw_line": "cimory 9 ribu",
+          "bbox": [
+            1137.69,
+            1083.57,
+            404.21,
+            123.38
+          ]
+        }
+      ]
+    },
+    {
+      "customer": "Mama Sasa",
+      "items": [
+        {
+          "product": "Indomie",
+          "quantity": 1,
+          "unit_price": 7000,
+          "raw_line": "indomie 7 ribu",
+          "bbox": [
+            1211.24,
+            2107.89,
+            429.03,
+            95.49
+          ]
+        },
+        {
+          "product": "Teajus",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "teajus",
+          "bbox": [
+            1649.38,
+            2128.69,
+            259.44,
+            132.31
+          ]
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": 0,
+          "raw_line": "kopi",
+          "bbox": [
+            330.3,
+            2701.22,
+            298.63,
+            117.64
+          ]
         }
       ]
     }

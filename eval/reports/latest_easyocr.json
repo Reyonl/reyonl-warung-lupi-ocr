@@ -1,0 +1,902 @@
+{
+  "timestamp": "2026-10-09T07:53:50.060386",
+  "engine": "easyocr",
+  "image_count": 2,
+  "images_evaluated": [
+    "IMG_20261008_115733.jpg",
+    "IMG_20261008_115737.jpg"
+  ],
+  "results": [
+    {
+      "image": "IMG_20261008_115733.jpg",
+      "engine": "easyocr",
+      "ocr_confidence": 0.4387,
+      "ocr_status": "uncertain",
+      "regions": 127,
+      "eval_time_seconds": 53.868,
+      "detected_lines": [
+        {
+          "text": "No",
+          "confidence": 0.8705
+        },
+        {
+          "text": "Kamis",
+          "confidence": 0.9494
+        },
+        {
+          "text": "OkT",
+          "confidence": 0.8441
+        },
+        {
+          "text": "08",
+          "confidence": 0.7726
+        },
+        {
+          "text": "Date",
+          "confidence": 0.9894
+        },
+        {
+          "text": "+ 2",
+          "confidence": 0.4886
+        },
+        {
+          "text": "9 A < V",
+          "confidence": 0.4083
+        },
+        {
+          "text": "OkRIS",
+          "confidence": 0.6469
+        },
+        {
+          "text": "madu",
+          "confidence": 0.9449
+        },
+        {
+          "text": "4",
+          "confidence": 0.3668
+        },
+        {
+          "text": "n'pis",
+          "confidence": 0.2806
+        },
+        {
+          "text": "I2(e",
+          "confidence": 0.1437
+        },
+        {
+          "text": "fer Gec ,6",
+          "confidence": 0.2991
+        },
+        {
+          "text": "Jauts S",
+          "confidence": 0.3657
+        },
+        {
+          "text": "@)et'",
+          "confidence": 0.1626
+        },
+        {
+          "text": "@<hg",
+          "confidence": 0.1442
+        },
+        {
+          "text": "Oanu",
+          "confidence": 0.2271
+        },
+        {
+          "text": "Kb 1",
+          "confidence": 0.2512
+        },
+        {
+          "text": "Pafe",
+          "confidence": 0.9526
+        },
+        {
+          "text": "€",
+          "confidence": 0.1728
+        },
+        {
+          "text": "TJvs",
+          "confidence": 0.1701
+        },
+        {
+          "text": "4",
+          "confidence": 0.9938
+        },
+        {
+          "text": "Galsu",
+          "confidence": 0.337
+        },
+        {
+          "text": "Rama",
+          "confidence": 0.9972
+        },
+        {
+          "text": "Jore 28",
+          "confidence": 0.7795
+        },
+        {
+          "text": "Camel",
+          "confidence": 0.7662
+        },
+        {
+          "text": "12",
+          "confidence": 0.8683
+        },
+        {
+          "text": "madu",
+          "confidence": 0.9835
+        },
+        {
+          "text": "+nPıs",
+          "confidence": 0.1575
+        },
+        {
+          "text": "28",
+          "confidence": 0.998
+        },
+        {
+          "text": "Fee",
+          "confidence": 0.2954
+        },
+        {
+          "text": "Sore",
+          "confidence": 0.7382
+        },
+        {
+          "text": "+ m #",
+          "confidence": 0.4126
+        },
+        {
+          "text": "=",
+          "confidence": 0.4747
+        },
+        {
+          "text": "sisâ",
+          "confidence": 0.4829
+        },
+        {
+          "text": "Bon lyk",
+          "confidence": 0.4607
+        },
+        {
+          "text": "marco",
+          "confidence": 0.9867
+        },
+        {
+          "text": "batu",
+          "confidence": 0.9354
+        },
+        {
+          "text": "Ik",
+          "confidence": 0.8934
+        },
+        {
+          "text": "es",
+          "confidence": 0.7967
+        },
+        {
+          "text": "Ar€_rat5",
+          "confidence": 0.1346
+        },
+        {
+          "text": "[",
+          "confidence": 0.1222
+        },
+        {
+          "text": "fzaQi",
+          "confidence": 0.403
+        },
+        {
+          "text": "JSur",
+          "confidence": 0.2158
+        },
+        {
+          "text": "IBan 6",
+          "confidence": 0.2425
+        },
+        {
+          "text": "1",
+          "confidence": 0.3396
+        },
+        {
+          "text": "Cmorf gk",
+          "confidence": 0.6286
+        },
+        {
+          "text": "2 Aruk +",
+          "confidence": 0.3574
+        },
+        {
+          "text": "lee =",
+          "confidence": 0.9459
+        },
+        {
+          "text": "4 Gafí +",
+          "confidence": 0.2232
+        },
+        {
+          "text": "t",
+          "confidence": 0.6899
+        },
+        {
+          "text": "8+",
+          "confidence": 0.5538
+        },
+        {
+          "text": "Peug 2 3l Elneo Cal",
+          "confidence": 0.1504
+        },
+        {
+          "text": "[+ dador",
+          "confidence": 0.1579
+        },
+        {
+          "text": "clF",
+          "confidence": 0.3938
+        },
+        {
+          "text": "AD<",
+          "confidence": 0.1434
+        },
+        {
+          "text": "5",
+          "confidence": 0.35
+        },
+        {
+          "text": "Lanis",
+          "confidence": 0.1806
+        },
+        {
+          "text": "buSa",
+          "confidence": 0.3154
+        },
+        {
+          "text": "V",
+          "confidence": 0.5273
+        },
+        {
+          "text": "1",
+          "confidence": 0.4611
+        },
+        {
+          "text": "5-",
+          "confidence": 0.5303
+        },
+        {
+          "text": "(aun",
+          "confidence": 0.6441
+        },
+        {
+          "text": "2",
+          "confidence": 0.2797
+        },
+        {
+          "text": "Muaoti FE",
+          "confidence": 0.1617
+        },
+        {
+          "text": "MGu_nalou 20+",
+          "confidence": 0.2576
+        },
+        {
+          "text": "4",
+          "confidence": 1.0
+        },
+        {
+          "text": "T nani f",
+          "confidence": 0.6257
+        },
+        {
+          "text": "nufleu",
+          "confidence": 0.7157
+        },
+        {
+          "text": "JLalok",
+          "confidence": 0.1844
+        },
+        {
+          "text": "32 lef",
+          "confidence": 0.4583
+        },
+        {
+          "text": "4pnn'",
+          "confidence": 0.127
+        },
+        {
+          "text": "Ma na",
+          "confidence": 0.6275
+        },
+        {
+          "text": "Sa Sa",
+          "confidence": 0.5205
+        },
+        {
+          "text": "Inda n",
+          "confidence": 0.929
+        },
+        {
+          "text": "2",
+          "confidence": 1.0
+        },
+        {
+          "text": "Hlf",
+          "confidence": 0.7052
+        },
+        {
+          "text": "4 7",
+          "confidence": 0.7354
+        },
+        {
+          "text": "hue Q",
+          "confidence": 0.1512
+        },
+        {
+          "text": "Tjw",
+          "confidence": 0.1945
+        },
+        {
+          "text": "YeQo",
+          "confidence": 0.2868
+        },
+        {
+          "text": "C",
+          "confidence": 0.1762
+        },
+        {
+          "text": "Lels",
+          "confidence": 0.2789
+        },
+        {
+          "text": "9 k Yals",
+          "confidence": 0.2939
+        },
+        {
+          "text": "Z^andi",
+          "confidence": 0.1479
+        },
+        {
+          "text": "2",
+          "confidence": 0.4183
+        },
+        {
+          "text": "lanıı_balef",
+          "confidence": 0.402
+        },
+        {
+          "text": "Su6",
+          "confidence": 0.552
+        },
+        {
+          "text": "Jl f",
+          "confidence": 0.4287
+        },
+        {
+          "text": "F",
+          "confidence": 0.8564
+        },
+        {
+          "text": "SZY",
+          "confidence": 0.2409
+        },
+        {
+          "text": "heekua Mag",
+          "confidence": 0.232
+        },
+        {
+          "text": "bQ",
+          "confidence": 0.1285
+        },
+        {
+          "text": "624",
+          "confidence": 0.4514
+        },
+        {
+          "text": "Orele_V2k +",
+          "confidence": 0.5326
+        },
+        {
+          "text": "+Rokok",
+          "confidence": 0.9701
+        },
+        {
+          "text": "5-[2 28",
+          "confidence": 0.3321
+        },
+        {
+          "text": "Wiem }",
+          "confidence": 0.134
+        },
+        {
+          "text": "8",
+          "confidence": 0.999
+        },
+        {
+          "text": "Tarjo2_lakek",
+          "confidence": 0.2085
+        },
+        {
+          "text": "47814  V",
+          "confidence": 0.271
+        },
+        {
+          "text": "F",
+          "confidence": 0.6463
+        },
+        {
+          "text": "ke]` +",
+          "confidence": 0.3499
+        },
+        {
+          "text": "A8z r",
+          "confidence": 0.2089
+        },
+        {
+          "text": "Iey +",
+          "confidence": 0.1732
+        },
+        {
+          "text": "Junas",
+          "confidence": 0.5516
+        },
+        {
+          "text": "4gu",
+          "confidence": 0.1234
+        },
+        {
+          "text": "to",
+          "confidence": 0.2448
+        },
+        {
+          "text": "7",
+          "confidence": 0.3809
+        },
+        {
+          "text": "2",
+          "confidence": 0.9977
+        },
+        {
+          "text": "Mahi [",
+          "confidence": 0.2297
+        },
+        {
+          "text": "Arc",
+          "confidence": 0.2528
+        },
+        {
+          "text": "d",
+          "confidence": 0.2714
+        },
+        {
+          "text": "kalaas 8 2v An k",
+          "confidence": 0.3642
+        },
+        {
+          "text": "ti",
+          "confidence": 0.5368
+        },
+        {
+          "text": "Anay",
+          "confidence": 0.1788
+        }
+      ],
+      "metrics": {
+        "cer": 1.0,
+        "wer": 1.0,
+        "date": {
+          "ground_truth": "08 OKT",
+          "detected": false,
+          "samples": []
+        },
+        "items": {
+          "products": {
+            "gt_count": 0,
+            "detected_count": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "image": "IMG_20261008_115737.jpg",
+      "engine": "easyocr",
+      "ocr_confidence": 0.3975,
+      "ocr_status": "uncertain",
+      "regions": 101,
+      "eval_time_seconds": 45.852,
+      "detected_lines": [
+        {
+          "text": "kamis",
+          "confidence": 0.9769
+        },
+        {
+          "text": "OKT",
+          "confidence": 0.9631
+        },
+        {
+          "text": "08",
+          "confidence": 0.9999
+        },
+        {
+          "text": "Guy ' +",
+          "confidence": 0.2005
+        },
+        {
+          "text": "1a [r",
+          "confidence": 0.4798
+        },
+        {
+          "text": "a 4",
+          "confidence": 0.1753
+        },
+        {
+          "text": "Nno",
+          "confidence": 0.2169
+        },
+        {
+          "text": "T Fpr€ $f",
+          "confidence": 0.1069
+        },
+        {
+          "text": "L",
+          "confidence": 0.4886
+        },
+        {
+          "text": "#s",
+          "confidence": 0.12
+        },
+        {
+          "text": "Cu+",
+          "confidence": 0.3349
+        },
+        {
+          "text": "Anavı",
+          "confidence": 0.2924
+        },
+        {
+          "text": "na nif",
+          "confidence": 0.2123
+        },
+        {
+          "text": "k) +",
+          "confidence": 0.3577
+        },
+        {
+          "text": "15",
+          "confidence": 0.4446
+        },
+        {
+          "text": "^ 6",
+          "confidence": 0.2003
+        },
+        {
+          "text": "Vux 2",
+          "confidence": 0.3811
+        },
+        {
+          "text": "+ vali 3",
+          "confidence": 0.4851
+        },
+        {
+          "text": "Pe",
+          "confidence": 0.7305
+        },
+        {
+          "text": "(i.",
+          "confidence": 0.3206
+        },
+        {
+          "text": "JSykv",
+          "confidence": 0.1754
+        },
+        {
+          "text": "8+",
+          "confidence": 0.8978
+        },
+        {
+          "text": "FGunr",
+          "confidence": 0.1618
+        },
+        {
+          "text": "rali",
+          "confidence": 0.2397
+        },
+        {
+          "text": "Jony",
+          "confidence": 0.2777
+        },
+        {
+          "text": "Thucue",
+          "confidence": 0.7253
+        },
+        {
+          "text": "4",
+          "confidence": 0.7991
+        },
+        {
+          "text": "Ilfzs",
+          "confidence": 0.1291
+        },
+        {
+          "text": "I5",
+          "confidence": 0.2784
+        },
+        {
+          "text": "nf",
+          "confidence": 0.3454
+        },
+        {
+          "text": "24 k",
+          "confidence": 0.9232
+        },
+        {
+          "text": "hdleı",
+          "confidence": 0.3351
+        },
+        {
+          "text": "CoCelet",
+          "confidence": 0.4709
+        },
+        {
+          "text": "Suku",
+          "confidence": 0.3205
+        },
+        {
+          "text": "k f",
+          "confidence": 0.1942
+        },
+        {
+          "text": "Aı",
+          "confidence": 0.2052
+        },
+        {
+          "text": "1646u8",
+          "confidence": 0.2251
+        },
+        {
+          "text": "=",
+          "confidence": 0.2545
+        },
+        {
+          "text": "38 4",
+          "confidence": 0.3009
+        },
+        {
+          "text": "Guny",
+          "confidence": 0.6987
+        },
+        {
+          "text": "poltele_lF",
+          "confidence": 0.2391
+        },
+        {
+          "text": "4",
+          "confidence": 0.1097
+        },
+        {
+          "text": "(",
+          "confidence": 0.887
+        },
+        {
+          "text": "A8<",
+          "confidence": 0.3871
+        },
+        {
+          "text": "+",
+          "confidence": 0.8691
+        },
+        {
+          "text": "KDPI",
+          "confidence": 0.2961
+        },
+        {
+          "text": "4",
+          "confidence": 1.0
+        },
+        {
+          "text": "AQua 6",
+          "confidence": 0.6207
+        },
+        {
+          "text": "346",
+          "confidence": 0.2984
+        },
+        {
+          "text": "[",
+          "confidence": 0.6908
+        },
+        {
+          "text": "Sıtr_Cancef l",
+          "confidence": 0.1387
+        },
+        {
+          "text": "l",
+          "confidence": 0.5582
+        },
+        {
+          "text": "Jexujos",
+          "confidence": 0.5822
+        },
+        {
+          "text": "+kukubıma Sk",
+          "confidence": 0.5196
+        },
+        {
+          "text": "sk",
+          "confidence": 0.853
+        },
+        {
+          "text": "Sk",
+          "confidence": 0.7274
+        },
+        {
+          "text": "Rah 2l + es",
+          "confidence": 0.3379
+        },
+        {
+          "text": "cahu_Fle f",
+          "confidence": 0.241
+        },
+        {
+          "text": "Iceu",
+          "confidence": 0.515
+        },
+        {
+          "text": "18 Doni2142]4 bala &k",
+          "confidence": 0.2003
+        },
+        {
+          "text": "Sk",
+          "confidence": 0.7875
+        },
+        {
+          "text": "IaPıs",
+          "confidence": 0.7622
+        },
+        {
+          "text": "+nagajarı",
+          "confidence": 0.2538
+        },
+        {
+          "text": "Faao",
+          "confidence": 0.3353
+        },
+        {
+          "text": "4 Aocag",
+          "confidence": 0.1273
+        },
+        {
+          "text": "Y",
+          "confidence": 0.2599
+        },
+        {
+          "text": "loT wy",
+          "confidence": 0.1182
+        },
+        {
+          "text": "Koj +4L",
+          "confidence": 0.178
+        },
+        {
+          "text": "tnnZe",
+          "confidence": 0.2009
+        },
+        {
+          "text": "Yudi",
+          "confidence": 0.948
+        },
+        {
+          "text": "[9",
+          "confidence": 0.1412
+        },
+        {
+          "text": "28",
+          "confidence": 0.9484
+        },
+        {
+          "text": "0u+",
+          "confidence": 0.2418
+        },
+        {
+          "text": "kn 2el",
+          "confidence": 0.2866
+        },
+        {
+          "text": "Mmn",
+          "confidence": 0.1815
+        },
+        {
+          "text": "90",
+          "confidence": 0.7014
+        },
+        {
+          "text": "hakasr",
+          "confidence": 0.1605
+        },
+        {
+          "text": "ak ' Jejus '",
+          "confidence": 0.3927
+        },
+        {
+          "text": "6l F",
+          "confidence": 0.4171
+        },
+        {
+          "text": "2",
+          "confidence": 0.9999
+        },
+        {
+          "text": "MMv",
+          "confidence": 0.429
+        },
+        {
+          "text": "Tuı",
+          "confidence": 0.1472
+        },
+        {
+          "text": "91",
+          "confidence": 0.5209
+        },
+        {
+          "text": "4191",
+          "confidence": 0.279
+        },
+        {
+          "text": "(2 Ceufe",
+          "confidence": 0.4061
+        },
+        {
+          "text": "4ay",
+          "confidence": 0.1047
+        },
+        {
+          "text": "/ane V",
+          "confidence": 0.1471
+        },
+        {
+          "text": "<",
+          "confidence": 0.5647
+        },
+        {
+          "text": "16u",
+          "confidence": 0.4465
+        },
+        {
+          "text": "Uuw",
+          "confidence": 0.1395
+        },
+        {
+          "text": "42 -",
+          "confidence": 0.4583
+        },
+        {
+          "text": "PAPERLINE",
+          "confidence": 0.9236
+        }
+      ],
+      "metrics": {
+        "cer": 1.0,
+        "wer": 1.0,
+        "date": {
+          "ground_truth": "8 OKTOBER",
+          "detected": false,
+          "samples": []
+        },
+        "items": {
+          "products": {
+            "gt_count": 0,
+            "detected_count": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "aggregates": {
+    "avg_cer": 1.0,
+    "avg_wer": 1.0,
+    "date_accuracy": 0.0
+  }
+}
