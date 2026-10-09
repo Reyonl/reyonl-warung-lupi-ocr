@@ -277,10 +277,24 @@ def main():
     service.register_engine(EasyOCREngine())
     service.register_engine(TesseractEngine())
 
+    # Load config and register cloud engines
+    try:
+        from src.config import OCRConfig
+        config = OCRConfig.load()
+        service.auto_register_default_engines(config)
+    except Exception as e:
+        print(f"Config/Gemini registration skipped: {e}")
+
     # Choose engine
     engine = args.engine
     if engine == "auto":
-        engine = "easyocr"
+        # Auto-select: gemini > easyocr (fallback)
+        available = service.get_available_engines()
+        if any(name.lower().startswith("gemini") for name in available):
+            engine = "gemini"
+        else:
+            engine = "easyocr"
+        print(f"Auto-selected engine: {engine} (available: {available})")
 
     # Run evaluation
     all_results = []
