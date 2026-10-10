@@ -1,25 +1,376 @@
 {
   "image": "IMG_20261008_115742.jpg",
-  "date": "2026-10-08",
-  "customer": null,
-  "lines": [
-    "P | Aa",
-    "BnAai al 1 ane An pe nAnG  A Gu —",
-    "DN Down EU CAS Jun Dane ak v -|e3) Hp :",
-    "Ia JPU sok",
-    "MEA 1. Sa Ka Mp Ddome If 4 Makan andi 8 reg B'",
-    "JEDA. TN. 5 Gr BM",
-    "Deo Dm Mita 3 Beri— )",
-    "Mk ii ia |) i"
-  ],
-  "items": [
+  "date": "08 OKT",
+  "currency": "IDR",
+  "status": "verified",
+  "sections": [
     {
-      "product": "Makan",
-      "qty": 1,
-      "unit_price": 10000,
-      "struck": false
+      "customer": "Ibu Terigu",
+      "items": [
+        {
+          "product": "Terigu",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "ambil terigu 2 pck"
+        },
+        {
+          "product": "Terigu",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Terigu le"
+        }
+      ]
+    },
+    {
+      "customer": "Mas Tris Ayam",
+      "items": [
+        {
+          "product": "Aqua",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Aqua k"
+        },
+        {
+          "product": "Surya 16",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Surya 16",
+          "struck_through": true
+        },
+        {
+          "product": "Mild",
+          "quantity": 1,
+          "unit_price": 38000,
+          "raw_line": "mild 38"
+        },
+        {
+          "product": "Kopi ABC",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "ABC"
+        }
+      ]
+    },
+    {
+      "customer": "Mas Pabean",
+      "items": [
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Kopi"
+        },
+        {
+          "product": "Jasjus",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "2 Jasjus siruk"
+        },
+        {
+          "product": "Samsu Refill",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Samsu Refill"
+        },
+        {
+          "product": "Rokok",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "rokok 1"
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "gorengan 1"
+        },
+        {
+          "product": "Rokok",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "2 rokok"
+        },
+        {
+          "product": "Kue Lapis",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "1 kue lapis 3k"
+        },
+        {
+          "product": "Nasi Goreng",
+          "quantity": 1,
+          "unit_price": 22000,
+          "raw_line": "nasgor 22"
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "gorengan 1"
+        },
+        {
+          "product": "Kue",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "1 kue 3k"
+        },
+        {
+          "product": "Martabak",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "2 martabak"
+        },
+        {
+          "product": "Es Nutrisari",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "Es Nutrisari 5k"
+        },
+        {
+          "product": "Wanz Menu",
+          "quantity": 1,
+          "unit_price": 18000,
+          "raw_line": "wanz menu 18"
+        },
+        {
+          "product": "Es Teh Jus",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Es T jus"
+        },
+        {
+          "product": "Kerupuk",
+          "quantity": 1,
+          "unit_price": 2000,
+          "raw_line": "kerupuk 2k"
+        },
+        {
+          "product": "Panther",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "panter"
+        },
+        {
+          "product": "Nipis Madu",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "nipis madu"
+        }
+      ]
+    },
+    {
+      "customer": "Uni Chanta",
+      "items": [
+        {
+          "product": "Kopi ABC",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "ABC"
+        },
+        {
+          "product": "Kopi Susu",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "2 Kopi susu"
+        },
+        {
+          "product": "Surya Mild",
+          "quantity": 1,
+          "unit_price": 32000,
+          "raw_line": "S mild 16 32k"
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "gorengan 5k"
+        },
+        {
+          "product": "Es Nutrisari Beng Beng",
+          "quantity": 1,
+          "unit_price": 8000,
+          "raw_line": "Es Nutrisari Beng Beng 8k"
+        }
+      ]
+    },
+    {
+      "customer": "Agus",
+      "items": [
+        {
+          "product": "Termos",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "termus"
+        },
+        {
+          "product": "Anggur Koles",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Anggur koles sequele"
+        },
+        {
+          "product": "Prima Gelas",
+          "quantity": 1,
+          "unit_price": 2000,
+          "raw_line": "Prima Gls 2k"
+        }
+      ]
+    },
+    {
+      "customer": "MJS",
+      "items": [
+        {
+          "product": "Es Batu",
+          "quantity": 3,
+          "unit_price": null,
+          "raw_line": "Es Batu 3"
+        },
+        {
+          "product": "Pop Mie",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "bungkus pop mie"
+        }
+      ]
+    },
+    {
+      "customer": "AKB",
+      "items": [
+        {
+          "product": "Aqua",
+          "quantity": 6,
+          "unit_price": null,
+          "raw_line": "Aqua 6"
+        },
+        {
+          "product": "Fruit Tea",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Fruit Tea"
+        },
+        {
+          "product": "Gudang Garam Filter",
+          "quantity": 1,
+          "unit_price": 30000,
+          "raw_line": "GD Filter 30k"
+        }
+      ]
+    },
+    {
+      "customer": "Untung",
+      "items": [
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 15000,
+          "raw_line": "gorengan 15k"
+        },
+        {
+          "product": "Kopi",
+          "quantity": 3,
+          "unit_price": null,
+          "raw_line": "3 kopi"
+        },
+        {
+          "product": "Surya 16",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Surya 16"
+        },
+        {
+          "product": "Anggur Mild",
+          "quantity": 1,
+          "unit_price": 38000,
+          "raw_line": "Anggur Mild 38"
+        },
+        {
+          "product": "Aqua",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Aqua k"
+        },
+        {
+          "product": "Aqua Botol",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "Aqua B + Aqua B"
+        },
+        {
+          "product": "Indomie",
+          "quantity": 1,
+          "unit_price": 17000,
+          "raw_line": "indomie 17"
+        },
+        {
+          "product": "Makan Andi",
+          "quantity": 1,
+          "unit_price": 18000,
+          "raw_line": "makan andi 18"
+        },
+        {
+          "product": "Evo",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "evo"
+        }
+      ]
+    },
+    {
+      "customer": "Hawa",
+      "items": [
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "gorengan 5k"
+        }
+      ]
+    },
+    {
+      "customer": "Mas Adi",
+      "items": [
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "kopi"
+        },
+        {
+          "product": "Sampoerna Mild",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Sampoerna mild"
+        }
+      ]
+    },
+    {
+      "customer": "Bm-Bm",
+      "items": [
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Kopi"
+        },
+        {
+          "product": "Kue",
+          "quantity": 2,
+          "unit_price": 5000,
+          "raw_line": "2 kere 5k"
+        },
+        {
+          "product": "Teh Jus",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "T jus"
+        },
+        {
+          "product": "Nutrisari",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "nutrisari"
+        }
+      ]
     }
-  ],
-  "notes": "EasyOCR detected: Makan, Donat, 20, 2, 42, 28",
-  "source": "draft_from_ocr_analysis_needs_verification"
+  ]
 }

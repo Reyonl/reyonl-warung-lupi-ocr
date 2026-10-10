@@ -39,7 +39,7 @@ class EngineConfig:
     preferred_engine: str = "auto"
     # Google Gemini Vision (cloud, optional — production quality)
     google_api_key: Optional[str] = None
-    gemini_model: str = "gemini-2.0-flash"
+    gemini_model: str = "gemini-3.5-flash"
     # Anthropic Claude Vision (cloud, optional — alternative production option)
     anthropic_api_key: Optional[str] = None
     claude_model: str = "claude-3-5-sonnet-20241022"

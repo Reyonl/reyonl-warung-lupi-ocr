@@ -8,7 +8,13 @@ depend on external Tesseract installation.
 EasyOCR supports both English and Indonesian models out of the box.
 """
 
-import easyocr
+try:
+    import easyocr
+    EASYOCR_AVAILABLE = True
+except ImportError:
+    easyocr = None
+    EASYOCR_AVAILABLE = False
+
 import cv2
 import numpy as np
 import logging
@@ -50,6 +56,8 @@ class EasyOCREngine(EngineInterface):
         return "easyocr-1.7"
 
     def is_available(self) -> bool:
+        if not EASYOCR_AVAILABLE:
+            return False
         try:
             self._get_reader()
             return True

@@ -1,26 +1,427 @@
 {
   "image": "IMG_20261008_115746.jpg",
-  "date": null,
-  "customer": null,
-  "lines": [
-    "si WNA kemarin ne aa",
-    "ds: Wild Some uk. ia YO",
-    "MH",
-    "a BA di - Bus RA",
-    "dag CE (PA Cted 1 im 128: woya. Si . Gn Yak. 1G",
-    "VI) j 1 Ly ! Ce Apu SAN",
-    "TI eV . 302 I Me Sol A : Hp Ala Awn AS ”y PP PAGI BR Wa",
-    "3 , | BA j . et MV, ) VA. N na",
-    "—. “Tuna",
-    "Mi ME an AM GUA GEA 4 Tua £ Dori mba. Bo",
-    "ni MA op 3 row “dB yA kep 4 AT me Alt AGuat",
-    "Daru — Meher Kon 6 SUS EA Pend G KA",
-    "t TIVS Ll. Die. &",
-    "ad. Pu: Ar ah LO 4 SuGu Jae mama SKA",
-    "nk oi Li “0 Bi 1 ian ii",
-    "— Mw mua: Lwenn 08 Me. SL"
-  ],
-  "items": [],
-  "notes": "Low quality, hard to read. Need manual inspection.",
-  "source": "draft_from_ocr_analysis_needs_verification"
+  "date": "08 OKT",
+  "currency": "IDR",
+  "status": "verified",
+  "sections": [
+    {
+      "customer": "Anggi",
+      "items": [
+        {
+          "product": "Mild",
+          "quantity": 1,
+          "unit_price": 4000,
+          "raw_line": "mild kemarin 4k + 4 = 8 lunas",
+          "struck_through": true
+        }
+      ]
+    },
+    {
+      "customer": "Supri",
+      "items": [
+        {
+          "product": "Mild",
+          "quantity": 1,
+          "unit_price": 4000,
+          "raw_line": "mild senin 4k belum"
+        }
+      ]
+    },
+    {
+      "customer": "Andy",
+      "items": [
+        {
+          "product": "Baso",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "Baso 5k"
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 2000,
+          "raw_line": "Gorengan 2k"
+        },
+        {
+          "product": "Es Campur",
+          "quantity": 1,
+          "unit_price": 6000,
+          "raw_line": "Seque 6k"
+        },
+        {
+          "product": "Makan",
+          "quantity": 1,
+          "unit_price": 16000,
+          "raw_line": "makan 16k"
+        },
+        {
+          "product": "Cleo",
+          "quantity": 1,
+          "unit_price": 1000,
+          "raw_line": "Cleo 1k"
+        }
+      ]
+    },
+    {
+      "customer": "Daun",
+      "items": [
+        {
+          "product": "Wafel",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "wafel 3k"
+        },
+        {
+          "product": "Capucino",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Capucino"
+        },
+        {
+          "product": "Boleole",
+          "quantity": 1,
+          "unit_price": 32000,
+          "raw_line": "boleole 32"
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "kopi"
+        },
+        {
+          "product": "Makan",
+          "quantity": 1,
+          "unit_price": 20000,
+          "raw_line": "makan 20k"
+        }
+      ]
+    },
+    {
+      "customer": "Fauzi",
+      "items": [
+        {
+          "product": "Susu",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "2 Susu"
+        },
+        {
+          "product": "Aqua Botol",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "2 Aqua B"
+        },
+        {
+          "product": "Nasi Goreng",
+          "quantity": 1,
+          "unit_price": 15000,
+          "raw_line": "nasgor 15k"
+        },
+        {
+          "product": "Ikan",
+          "quantity": 1,
+          "unit_price": 30000,
+          "raw_line": "ikan 30k"
+        },
+        {
+          "product": "Sayur Asem Ikan Peda",
+          "quantity": 1,
+          "unit_price": 25000,
+          "raw_line": "mkn sayur asem ikan pedak 1 25k"
+        },
+        {
+          "product": "Yakult",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Yakult 1"
+        }
+      ]
+    },
+    {
+      "customer": "Tompel",
+      "items": [
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Kopi"
+        },
+        {
+          "product": "Teh Jus",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "T. Jus"
+        }
+      ]
+    },
+    {
+      "customer": "Dani",
+      "items": [
+        {
+          "product": "Esse Double",
+          "quantity": 1,
+          "unit_price": 7000,
+          "raw_line": "Esse double 7k"
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Kopi"
+        },
+        {
+          "product": "Teh Jus",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "T jus"
+        },
+        {
+          "product": "Makan",
+          "quantity": 1,
+          "unit_price": 20000,
+          "raw_line": "Doni mkn 20"
+        },
+        {
+          "product": "Kerupuk",
+          "quantity": 1,
+          "unit_price": 2000,
+          "raw_line": "kerupuk 2k"
+        },
+        {
+          "product": "Makan",
+          "quantity": 1,
+          "unit_price": 23000,
+          "raw_line": "Tegile mkn 23"
+        },
+        {
+          "product": "Coconico",
+          "quantity": 1,
+          "unit_price": 3000,
+          "raw_line": "coconico 3k"
+        },
+        {
+          "product": "Teh Susu",
+          "quantity": 1,
+          "unit_price": 8000,
+          "raw_line": "T su 8k"
+        },
+        {
+          "product": "Aqua Botol",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Aqua B"
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "kopi"
+        },
+        {
+          "product": "Roti",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "Roti 2"
+        }
+      ]
+    },
+    {
+      "customer": "Mbak Tami",
+      "items": [
+        {
+          "product": "Makaroni",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Makaroni"
+        },
+        {
+          "product": "Aqua Botol",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Aqua B"
+        },
+        {
+          "product": "Susu",
+          "quantity": 1,
+          "unit_price": 8000,
+          "raw_line": "Susu 8"
+        },
+        {
+          "product": "Bentol",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "Bentol 5k"
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Gorengan ?"
+        }
+      ]
+    },
+    {
+      "customer": "Opung",
+      "items": [
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Kopi"
+        },
+        {
+          "product": "Josu",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "Josu 5k"
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 10000,
+          "raw_line": "gorengan 10k"
+        },
+        {
+          "product": "Makaroni",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "makaroni"
+        },
+        {
+          "product": "Emping",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Emping"
+        },
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Kopi"
+        }
+      ]
+    },
+    {
+      "customer": "Irfan",
+      "items": [
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Kopi"
+        },
+        {
+          "product": "Aqua",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Aqua k"
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 7000,
+          "raw_line": "Gorengan 7k"
+        },
+        {
+          "product": "Makan",
+          "quantity": 1,
+          "unit_price": 6000,
+          "raw_line": "makan 6k"
+        },
+        {
+          "product": "Teh Jus",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "T jus"
+        }
+      ]
+    },
+    {
+      "customer": "Tim C",
+      "items": [
+        {
+          "product": "Aqua Botol",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Aqua B"
+        },
+        {
+          "product": "Nutrisafe",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Nutrisafe"
+        },
+        {
+          "product": "Es Jasmine",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Es jasmine"
+        },
+        {
+          "product": "Nutrisari",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "Nutrisari 5k"
+        }
+      ]
+    },
+    {
+      "customer": "Pak Mukti",
+      "items": [
+        {
+          "product": "Tahu",
+          "quantity": 1,
+          "unit_price": 10000,
+          "raw_line": "ambil tahu 10k"
+        },
+        {
+          "product": "Susu Jasmine",
+          "quantity": 1,
+          "unit_price": 5000,
+          "raw_line": "Susu Jasmine 5k"
+        },
+        {
+          "product": "Keraton",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Keraton ?"
+        }
+      ]
+    },
+    {
+      "customer": "Yudi Frozen",
+      "items": [
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Kopi"
+        },
+        {
+          "product": "Gorengan",
+          "quantity": 1,
+          "unit_price": 7000,
+          "raw_line": "Gorengan 7k"
+        }
+      ]
+    },
+    {
+      "customer": "Iwan Frozen",
+      "items": [
+        {
+          "product": "Teh Manis",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "T manis"
+        },
+        {
+          "product": "Ok Segar",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Ok segar"
+        }
+      ]
+    }
+  ]
 }

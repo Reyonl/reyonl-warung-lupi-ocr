@@ -1,0 +1,710 @@
+{
+  "timestamp": "2026-10-10T08:09:29.686332",
+  "engine": "tesseract",
+  "image_count": 2,
+  "images_evaluated": [
+    "IMG_20261008_115733.jpg",
+    "IMG_20261008_115737.jpg"
+  ],
+  "results": [
+    {
+      "image": "IMG_20261008_115733.jpg",
+      "engine": "tesseract",
+      "ocr_confidence": 0.2162,
+      "ocr_status": "uncertain",
+      "regions": 151,
+      "eval_time_seconds": 12.77,
+      "detected_lines": [
+        {
+          "text": "OZ",
+          "confidence": 0.24
+        },
+        {
+          "text": "OKT",
+          "confidence": 0.72
+        },
+        {
+          "text": "KamMiS",
+          "confidence": 0.57
+        },
+        {
+          "text": "Pia",
+          "confidence": 0.47
+        },
+        {
+          "text": "Mo",
+          "confidence": 0.17
+        },
+        {
+          "text": "sa",
+          "confidence": 0.25
+        },
+        {
+          "text": "asma",
+          "confidence": 0.13
+        },
+        {
+          "text": "ma",
+          "confidence": 0.19
+        },
+        {
+          "text": "ea",
+          "confidence": 0.32
+        },
+        {
+          "text": "ia",
+          "confidence": 0.19
+        },
+        {
+          "text": "TE",
+          "confidence": 0.13
+        },
+        {
+          "text": "TT",
+          "confidence": 0.2
+        },
+        {
+          "text": "TT",
+          "confidence": 0.45
+        },
+        {
+          "text": "TT",
+          "confidence": 0.45
+        },
+        {
+          "text": "TT",
+          "confidence": 0.42
+        },
+        {
+          "text": "TI,",
+          "confidence": 0.35
+        },
+        {
+          "text": "2",
+          "confidence": 0.22
+        },
+        {
+          "text": "Sa",
+          "confidence": 0.39
+        },
+        {
+          "text": "Mk",
+          "confidence": 0.26
+        },
+        {
+          "text": "Ema",
+          "confidence": 0.27
+        },
+        {
+          "text": "6",
+          "confidence": 0.3
+        },
+        {
+          "text": "ie",
+          "confidence": 0.31
+        },
+        {
+          "text": "madu",
+          "confidence": 0.58
+        },
+        {
+          "text": "—",
+          "confidence": 0.7
+        },
+        {
+          "text": "Ve",
+          "confidence": 0.28
+        },
+        {
+          "text": "en",
+          "confidence": 0.25
+        },
+        {
+          "text": "ne",
+          "confidence": 0.39
+        },
+        {
+          "text": "TA",
+          "confidence": 0.51
+        },
+        {
+          "text": "Pane",
+          "confidence": 0.13
+        },
+        {
+          "text": "beer",
+          "confidence": 0.33
+        },
+        {
+          "text": "Gen",
+          "confidence": 0.4
+        },
+        {
+          "text": "dk",
+          "confidence": 0.37
+        },
+        {
+          "text": "Do",
+          "confidence": 0.31
+        },
+        {
+          "text": "Are",
+          "confidence": 0.22
+        },
+        {
+          "text": "Raha",
+          "confidence": 0.13
+        },
+        {
+          "text": "PISA",
+          "confidence": 0.28
+        },
+        {
+          "text": "3",
+          "confidence": 0.49
+        },
+        {
+          "text": "Alit",
+          "confidence": 0.14
+        },
+        {
+          "text": "1",
+          "confidence": 0.29
+        },
+        {
+          "text": "9",
+          "confidence": 0.61
+        },
+        {
+          "text": "Donald",
+          "confidence": 0.4
+        },
+        {
+          "text": "2",
+          "confidence": 0.41
+        },
+        {
+          "text": "Aint",
+          "confidence": 0.47
+        },
+        {
+          "text": "Baga",
+          "confidence": 0.18
+        },
+        {
+          "text": "Da",
+          "confidence": 0.27
+        },
+        {
+          "text": "2d",
+          "confidence": 0.13
+        },
+        {
+          "text": "DM",
+          "confidence": 0.36
+        },
+        {
+          "text": "Oleh",
+          "confidence": 0.15
+        },
+        {
+          "text": "dada",
+          "confidence": 0.45
+        },
+        {
+          "text": "Tang",
+          "confidence": 0.26
+        },
+        {
+          "text": "TT",
+          "confidence": 0.25
+        },
+        {
+          "text": "/",
+          "confidence": 0.85
+        },
+        {
+          "text": "2",
+          "confidence": 0.43
+        },
+        {
+          "text": "Waw",
+          "confidence": 0.26
+        },
+        {
+          "text": "2»",
+          "confidence": 0.44
+        },
+        {
+          "text": "Wiu",
+          "confidence": 0.33
+        },
+        {
+          "text": "walau",
+          "confidence": 0.63
+        },
+        {
+          "text": "201",
+          "confidence": 0.85
+        },
+        {
+          "text": "T",
+          "confidence": 0.83
+        },
+        {
+          "text": "manis",
+          "confidence": 0.25
+        },
+        {
+          "text": "3",
+          "confidence": 0.22
+        },
+        {
+          "text": "Fe",
+          "confidence": 0.17
+        },
+        {
+          "text": "Mila",
+          "confidence": 0.28
+        },
+        {
+          "text": "/",
+          "confidence": 0.15
+        },
+        {
+          "text": "3A",
+          "confidence": 0.17
+        },
+        {
+          "text": "ld",
+          "confidence": 0.4
+        },
+        {
+          "text": "JOM",
+          "confidence": 0.14
+        },
+        {
+          "text": "BN",
+          "confidence": 0.43
+        },
+        {
+          "text": "Ep",
+          "confidence": 0.42
+        },
+        {
+          "text": "GK",
+          "confidence": 0.16
+        },
+        {
+          "text": "Ud",
+          "confidence": 0.34
+        },
+        {
+          "text": "Ck",
+          "confidence": 0.43
+        },
+        {
+          "text": "Rekor",
+          "confidence": 0.24
+        },
+        {
+          "text": "sma.",
+          "confidence": 0.25
+        },
+        {
+          "text": "9",
+          "confidence": 0.22
+        },
+        {
+          "text": "kelak",
+          "confidence": 0.55
+        },
+        {
+          "text": "4",
+          "confidence": 0.15
+        },
+        {
+          "text": "Gia",
+          "confidence": 0.2
+        },
+        {
+          "text": "KT",
+          "confidence": 0.54
+        },
+        {
+          "text": "SE",
+          "confidence": 0.29
+        },
+        {
+          "text": "Gt",
+          "confidence": 0.16
+        },
+        {
+          "text": "KT",
+          "confidence": 0.37
+        },
+        {
+          "text": "ae",
+          "confidence": 0.13
+        },
+        {
+          "text": "UNS",
+          "confidence": 0.37
+        },
+        {
+          "text": "ta",
+          "confidence": 0.46
+        },
+        {
+          "text": "2",
+          "confidence": 0.48
+        },
+        {
+          "text": "T",
+          "confidence": 0.59
+        },
+        {
+          "text": "KI",
+          "confidence": 0.37
+        },
+        {
+          "text": "AE",
+          "confidence": 0.13
+        },
+        {
+          "text": "51",
+          "confidence": 0.39
+        },
+        {
+          "text": "ONE",
+          "confidence": 0.11
+        },
+        {
+          "text": "AA",
+          "confidence": 0.27
+        },
+        {
+          "text": "TT",
+          "confidence": 0.24
+        }
+      ],
+      "metrics": {
+        "cer": 3.1139,
+        "wer": 3.0506,
+        "date": {
+          "ground_truth": "08 OKT",
+          "detected": false,
+          "samples": []
+        },
+        "customer": {
+          "ground_truth": "Kris, Marco, Mama Sasa",
+          "detected": false
+        },
+        "items": {
+          "products": {
+            "gt_count": 10,
+            "detected_count": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "image": "IMG_20261008_115737.jpg",
+      "engine": "tesseract",
+      "ocr_confidence": 0.2067,
+      "ocr_status": "uncertain",
+      "regions": 106,
+      "eval_time_seconds": 12.522,
+      "detected_lines": [
+        {
+          "text": "kr",
+          "confidence": 0.12
+        },
+        {
+          "text": "Teater",
+          "confidence": 0.29
+        },
+        {
+          "text": "1",
+          "confidence": 0.36
+        },
+        {
+          "text": "Lek",
+          "confidence": 0.26
+        },
+        {
+          "text": "ar",
+          "confidence": 0.53
+        },
+        {
+          "text": "Nu",
+          "confidence": 0.22
+        },
+        {
+          "text": "GX",
+          "confidence": 0.22
+        },
+        {
+          "text": "Gowa",
+          "confidence": 0.31
+        },
+        {
+          "text": "Gina",
+          "confidence": 0.19
+        },
+        {
+          "text": "TE",
+          "confidence": 0.24
+        },
+        {
+          "text": "EPL",
+          "confidence": 0.19
+        },
+        {
+          "text": "de",
+          "confidence": 0.31
+        },
+        {
+          "text": "RE",
+          "confidence": 0.18
+        },
+        {
+          "text": "Ga",
+          "confidence": 0.28
+        },
+        {
+          "text": "4",
+          "confidence": 0.58
+        },
+        {
+          "text": "BEN",
+          "confidence": 0.22
+        },
+        {
+          "text": "GS",
+          "confidence": 0.22
+        },
+        {
+          "text": "3",
+          "confidence": 0.28
+        },
+        {
+          "text": "Ia",
+          "confidence": 0.24
+        },
+        {
+          "text": "TT",
+          "confidence": 0.4
+        },
+        {
+          "text": "maa",
+          "confidence": 0.29
+        },
+        {
+          "text": "ni",
+          "confidence": 0.5
+        },
+        {
+          "text": "IE",
+          "confidence": 0.16
+        },
+        {
+          "text": "1",
+          "confidence": 0.18
+        },
+        {
+          "text": "Kek",
+          "confidence": 0.27
+        },
+        {
+          "text": "UE",
+          "confidence": 0.25
+        },
+        {
+          "text": "TAS",
+          "confidence": 0.41
+        },
+        {
+          "text": "let",
+          "confidence": 0.55
+        },
+        {
+          "text": "1.",
+          "confidence": 0.41
+        },
+        {
+          "text": "Safari",
+          "confidence": 0.4
+        },
+        {
+          "text": "ne",
+          "confidence": 0.16
+        },
+        {
+          "text": "€",
+          "confidence": 0.33
+        },
+        {
+          "text": "“TE",
+          "confidence": 0.26
+        },
+        {
+          "text": "Dom",
+          "confidence": 0.26
+        },
+        {
+          "text": "Skep",
+          "confidence": 0.28
+        },
+        {
+          "text": "Mata",
+          "confidence": 0.56
+        },
+        {
+          "text": "SEA",
+          "confidence": 0.4
+        },
+        {
+          "text": "es",
+          "confidence": 0.42
+        },
+        {
+          "text": "ala",
+          "confidence": 0.25
+        },
+        {
+          "text": "Tlk",
+          "confidence": 0.2
+        },
+        {
+          "text": "Ran",
+          "confidence": 0.26
+        },
+        {
+          "text": "ak",
+          "confidence": 0.13
+        },
+        {
+          "text": "es",
+          "confidence": 0.59
+        },
+        {
+          "text": "Sk",
+          "confidence": 0.38
+        },
+        {
+          "text": "3",
+          "confidence": 0.54
+        },
+        {
+          "text": "1g:",
+          "confidence": 0.16
+        },
+        {
+          "text": "yua",
+          "confidence": 0.56
+        },
+        {
+          "text": "Kam",
+          "confidence": 0.21
+        },
+        {
+          "text": "Ar",
+          "confidence": 0.21
+        },
+        {
+          "text": "OA",
+          "confidence": 0.39
+        },
+        {
+          "text": "“50.",
+          "confidence": 0.45
+        },
+        {
+          "text": "ke",
+          "confidence": 0.51
+        },
+        {
+          "text": "“aw",
+          "confidence": 0.28
+        },
+        {
+          "text": "Ol",
+          "confidence": 0.6
+        },
+        {
+          "text": "Sen",
+          "confidence": 0.15
+        },
+        {
+          "text": "Na",
+          "confidence": 0.24
+        },
+        {
+          "text": "YAN",
+          "confidence": 0.22
+        },
+        {
+          "text": "——",
+          "confidence": 0.73
+        },
+        {
+          "text": "—",
+          "confidence": 0.31
+        },
+        {
+          "text": "Ga",
+          "confidence": 0.12
+        },
+        {
+          "text": "3",
+          "confidence": 0.25
+        },
+        {
+          "text": "Gi",
+          "confidence": 0.2
+        },
+        {
+          "text": "ay",
+          "confidence": 0.26
+        },
+        {
+          "text": "SAAT",
+          "confidence": 0.11
+        },
+        {
+          "text": "PAPERLINE",
+          "confidence": 0.71
+        }
+      ],
+      "metrics": {
+        "cer": 0.7586,
+        "wer": 0.7207,
+        "date": {
+          "ground_truth": "8 OKTOBER",
+          "detected": false,
+          "samples": []
+        },
+        "customer": {
+          "ground_truth": "Risky, Mama Sasa, Andres, Pak Ade Lele, Irfan, Agus, Doni 2 Kopi Biasa 8 Ribu, Yudi Frozen, Iwan Frozen, Mbak Tami",
+          "detected": false
+        },
+        "items": {
+          "products": {
+            "gt_count": 27,
+            "detected_count": 1,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "aggregates": {
+    "avg_cer": 1.9363,
+    "avg_wer": 1.8857,
+    "date_accuracy": 0.0
+  }
+}

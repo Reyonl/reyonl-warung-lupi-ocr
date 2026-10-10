@@ -651,15 +651,22 @@ class InterpretationService:
     def enhance_with_products(self, result: InterpretedResult, products: List[dict]) -> InterpretedResult:
         """
         Phase 3 integration: add product candidates to each item.
-        Call this after interpretation if product DB is available.
+        Uses ImprovedMatcher with trigram, phonetic, alias, and price context.
         """
-        from difflib import SequenceMatcher
+        from src.matching.improved_matching import ImprovedMatcher
+
+        matcher = ImprovedMatcher(product_catalog=products)
 
         for item in result.items:
-            item.product_candidates = self._match_products(item.detected_text, products)
+            item_price = int(item.price) if item.price and not np.isnan(item.price) else None
+            candidates = matcher.rank_products(item.detected_text, price=item_price, top_k=5)
+            if not candidates:
+                candidates = self._match_products(item.detected_text, products)
+
+            item.product_candidates = candidates
             if item.product_candidates:
                 top = item.product_candidates[0]
-                if top["score"] > 0.85:
+                if top["score"] >= 0.85:
                     item.matched_product_id = top["product_id"]
                     item.matched_product_name = top["name"]
                 else:
@@ -668,36 +675,15 @@ class InterpretationService:
         return result
 
     def enhance_with_customers(self, result: InterpretedResult, customers: List[dict]) -> InterpretedResult:
-        """Phase 4 integration: add customer candidates."""
-        from difflib import SequenceMatcher
+        """Phase 4 integration: add customer candidates using ImprovedMatcher."""
+        from src.matching.improved_matching import ImprovedMatcher
 
         if result.customer and result.customer.detected_name:
-            matches = []
-            detected = result.customer.detected_name.lower()
+            matcher = ImprovedMatcher(customer_catalog=customers)
+            matches = matcher.rank_customers(result.customer.detected_name, top_k=3)
+            result.customer.customer_candidates = matches
 
-            for cust in customers:
-                cust_name = cust.get("name", "").lower()
-                if not cust_name:
-                    continue
-
-                # Fuzzy match
-                ratio = SequenceMatcher(None, detected, cust_name).ratio()
-
-                # Substring match (e.g., "tami" matches "Mbak Tami")
-                if detected in cust_name or cust_name in detected:
-                    ratio = max(ratio, 0.9)
-
-                if ratio > 0.4:  # Threshold
-                    matches.append({
-                        "customer_id": cust.get("id"),
-                        "name": cust.get("name"),
-                        "score": round(float(ratio), 4),
-                    })
-
-            matches.sort(key=lambda x: x["score"], reverse=True)
-            result.customer.customer_candidates = matches[:3]  # Top 3
-
-            if matches and matches[0]["score"] > 0.8:
+            if matches and matches[0]["score"] >= 0.80:
                 result.customer.matched_customer_id = matches[0]["customer_id"]
             elif matches:
                 result.uncertain.append(

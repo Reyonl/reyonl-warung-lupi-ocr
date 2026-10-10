@@ -38,7 +38,7 @@ def load_ground_truths():
     gts = {}
     if GROUND_TRUTH_DIR.exists():
         for f in GROUND_TRUTH_DIR.glob("*.json"):
-            with open(f) as fh:
+            with open(f, encoding="utf-8") as fh:
                 gt = json.load(fh)
                 gts[gt["image"]] = gt
     return gts
@@ -137,8 +137,27 @@ def evaluate_image(image_path: str, engine: str, ground_truth: dict | None,
         result["note"] = "No ground truth available for this image"
         return result
 
+    # Normalize ground truth data structure (supports both sectioned and flat format)
+    if "sections" in ground_truth:
+        gt_lines = []
+        gt_customers = []
+        gt_items = []
+        for sec in ground_truth.get("sections", []):
+            cust = sec.get("customer")
+            if cust and cust != "Unknown":
+                gt_customers.append(cust)
+            for it in sec.get("items", []):
+                gt_items.append(it)
+                raw = it.get("raw_line")
+                if raw:
+                    gt_lines.append(raw)
+    else:
+        gt_lines = ground_truth.get("lines", [])
+        gt_customers = [ground_truth.get("customer")] if ground_truth.get("customer") else []
+        gt_items = ground_truth.get("items", [])
+
     # CER/WER: compare full raw text
-    gt_lines_joined = " ".join(ground_truth.get("lines", []))
+    gt_lines_joined = " ".join(gt_lines)
     cer = character_error_rate(scan.raw_text, gt_lines_joined)
     wer = word_error_rate(scan.raw_text, gt_lines_joined)
     result["metrics"] = {
@@ -151,9 +170,7 @@ def evaluate_image(image_path: str, engine: str, ground_truth: dict | None,
     if gt_date:
         detected_dates = []
         for line in detected_lines:
-            # Look for date-like patterns
             import re
-            # Indonesian date patterns: 08/10, 08-10-2026, 8 Oktober, etc
             text = line["text"]
             if re.search(r'\d{1,2}[/.-]\d{1,2}([/.-]\d{2,4})?', text):
                 detected_dates.append(text)
@@ -167,32 +184,28 @@ def evaluate_image(image_path: str, engine: str, ground_truth: dict | None,
         }
 
     # Customer accuracy
-    gt_customer = ground_truth.get("customer", "")
-    if gt_customer:
+    if gt_customers:
         customer_detected = any(
-            normalize_text(gt_customer) in normalize_text(line["text"])
+            any(normalize_text(cust) in normalize_text(line["text"]) for cust in gt_customers)
             for line in detected_lines
         )
         result["metrics"]["customer"] = {
-            "ground_truth": gt_customer,
+            "ground_truth": ", ".join(gt_customers),
             "detected": customer_detected,
         }
 
     # Item detection: how many lines contain product names
-    gt_items = ground_truth.get("items", [])
     detected_product_names = set()
     detected_qtys = set()
     detected_prices = set()
 
     for line in detected_lines:
         line_text = normalize_text(line["text"])
-        # Check for product names
         for prod in product_catalog:
             prod_norm = normalize_text(prod["name"])
             if prod_norm in line_text or line_text in prod_norm:
                 if len(line_text) > 2:
                     detected_product_names.add(prod["name"])
-        # Check for prices (numbers with Rp or just digits in thousands range)
         import re
         prices_in_line = re.findall(r'(?:Rp\s*)?(\d{3,6})(?:\.\d{3})?', line["text"])
         for p in prices_in_line:
@@ -202,16 +215,13 @@ def evaluate_image(image_path: str, engine: str, ground_truth: dict | None,
                     detected_prices.add(val)
             except ValueError:
                 pass
-        # Check for quantities
         qty_matches = re.findall(r'\bx(\d+)|\b(\d+)x\b|\b[\(](\d+)[\)]', line["text"])
         for parts in qty_matches:
             for part in parts:
                 if part and int(part) < 100:
                     detected_qtys.add(int(part))
 
-    gt_product_names = {item["product"] for item in gt_items}
-    gt_qtys = {item.get("qty") for item in gt_items if item.get("qty")}
-    gt_prices = {item.get("unit_price") for item in gt_items if item.get("unit_price")}
+    gt_product_names = {item["product"] for item in gt_items if item.get("product")}
 
     result["metrics"]["items"] = {
         "products": {
@@ -227,7 +237,7 @@ def evaluate_image(image_path: str, engine: str, ground_truth: dict | None,
 
 def main():
     parser = argparse.ArgumentParser(description="OCR Evaluation Harness")
-    parser.add_argument("--engine", choices=["easyocr", "tesseract", "auto"],
+    parser.add_argument("--engine", choices=["easyocr", "tesseract", "gemini", "claude", "auto"],
                         default="auto", help="Engine to evaluate")
     parser.add_argument("--limit", type=int, default=5,
                         help="Max images to evaluate")
@@ -274,26 +284,30 @@ def main():
 
     # Setup engine service
     service = EngineService()
-    service.register_engine(EasyOCREngine())
-    service.register_engine(TesseractEngine())
 
-    # Load config and register cloud engines
+    # Load config and auto-register engines
     try:
         from src.config import OCRConfig
         config = OCRConfig.load()
         service.auto_register_default_engines(config)
     except Exception as e:
-        print(f"Config/Gemini registration skipped: {e}")
+        print(f"Config/Engine registration note: {e}")
+        service.auto_register_default_engines(None)
 
     # Choose engine
     engine = args.engine
     if engine == "auto":
-        # Auto-select: gemini > easyocr (fallback)
         available = service.get_available_engines()
         if any(name.lower().startswith("gemini") for name in available):
             engine = "gemini"
-        else:
+        elif any(name.lower().startswith("claude") for name in available):
+            engine = "claude"
+        elif any(name.lower().startswith("easyocr") for name in available):
             engine = "easyocr"
+        elif any(name.lower().startswith("tesseract") for name in available):
+            engine = "tesseract"
+        else:
+            engine = "tesseract"
         print(f"Auto-selected engine: {engine} (available: {available})")
 
     # Run evaluation
@@ -314,8 +328,12 @@ def main():
             d = metrics.get("date", {})
             metric_str += f" date={d.get('ground_truth')}->{'✓' if d.get('detected') else '✗'}"
 
-        gt_line = f" [GT: date={gt.get('date','?')}, items={len(gt.get('items',[]))}]" if gt else " [No GT]"
-        print(f"  {basename}: {engine} conf={result['ocr_confidence']:.3f} regions={result['regions']} t={result['eval_time_seconds']:.1f}s{metric_str}{gt_line}")
+        if gt:
+            item_count = sum(len(s.get("items", [])) for s in gt.get("sections", [])) if "sections" in gt else len(gt.get("items", []))
+            gt_line = f" [GT: date={gt.get('date','?')}, items={item_count}]"
+        else:
+            gt_line = " [No GT]"
+        print(f"  {basename}: {engine} conf={result['ocr_confidence']:.3f} regions={result['regions']} t={result['eval_time_seconds']:.1f}s{metric_str}{gt_line}", flush=True)
 
     # Aggregate metrics
     report = {
@@ -346,12 +364,12 @@ def main():
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
     report_path = REPORTS_DIR / f"{timestamp_str}_{engine}.json"
-    with open(report_path, "w") as f:
+    with open(report_path, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 
     # Also save as "latest"
     latest_path = REPORTS_DIR / f"latest_{engine}.json"
-    with open(latest_path, "w") as f:
+    with open(latest_path, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 
     # Print summary table

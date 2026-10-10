@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-09T07:53:50.060386",
+  "timestamp": "2026-10-09T08:17:58.629320",
   "engine": "easyocr",
   "image_count": 2,
   "images_evaluated": [
@@ -13,7 +13,7 @@
       "ocr_confidence": 0.4387,
       "ocr_status": "uncertain",
       "regions": 127,
-      "eval_time_seconds": 53.868,
+      "eval_time_seconds": 53.218,
       "detected_lines": [
         {
           "text": "No",
@@ -504,7 +504,7 @@
       "ocr_confidence": 0.3975,
       "ocr_status": "uncertain",
       "regions": 101,
-      "eval_time_seconds": 45.852,
+      "eval_time_seconds": 47.964,
       "detected_lines": [
         {
           "text": "kamis",

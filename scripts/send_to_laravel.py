@@ -8,7 +8,7 @@ sys.path.insert(0, PROJECT)
 os.chdir(PROJECT)
 os.environ["TESSDATA_PREFIX"] = os.path.abspath("tessdata")
 
-from eval.matching import ImprovedMatcher
+from src.matching.improved_matching import ImprovedMatcher
 
 DEFAULT_PRODUCTS = [
     {"id": 1, "name": "Kopi", "default_price": 5000},

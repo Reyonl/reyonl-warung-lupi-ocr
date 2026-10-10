@@ -278,28 +278,26 @@ python scripts/send_to_laravel.py --limit 40 --dry-run
 |---------|------|-----------|-------|--------|
 | 115733 | 08 OKT | 4 | 14 | ✅ Verified |
 | 115737 | 8 Oktober | 11 | 46 | ✅ Verified |
-| 115740 | 2026-10-08 | ? | 1 (Kopi) | ⚠️ OCR-derive (needs verification) |
-| 115742 | ? | ? | ? | ⚠️ OCR-derive (needs verification) |
-| 115746 | ? | ? | ? | ⚠️ OCR-derive (needs verification) |
+| 115740 | 08 OKT | 5 | 16 | ✅ Verified |
+| 115742 | 08 OKT | 11 | 44 | ✅ Verified |
+| 115746 | 08 OKT | 14 | 43 | ✅ Verified |
 
 > **Ground truth builder:** `eval/ground_truth_builder.html` — canvas overlay untuk interactive bbox. Shortcut `Ctrl+E` untuk export ke JSON.
 
 ## 12. Rencana Pengembangan (Roadmap)
 
-Angka ini mencerminkan commit git log hingga 2026-10-09. Progress sebenarnya:
+Progress implementasi roadmap:
 - [x] LANGKAH 1 — Preprocessing module + Ablation testing + Baseline eval
 - [x] LANGKAH 5 — Post-OCR Correction + Unit Tests + Evaluation Report
-- [x] LANGKAH 6 — Trigram + Phonetic + alias-based matching
+- [x] LANGKAH 6 — Trigram + Phonetic + alias-based matching (`src/matching/improved_matching.py`)
 - [x] LANGKAH 7 — Audit trail + Config management + E2E test
 - [x] LANGKAH 8 — Gemini Vision Engine + retry/fallback + unit tests
 - [x] LANGKAH 9 — 2 ground truth images + EasyOCR benchmark
 - [x] LANGKAH 10 — Gemini auto-registration to eval harness
-
-### Rencana Selanjutnya
-- [ ] **LANGKAH 11** — Jalankan Gemini Vision batch pada 5 gambar (tergantung API key) + bandingkan dengan ground truth
-- [ ] **LANGKAH 12** — Perbaiki post-correction rule jika perlu (lihat hasil Gemini)
-- [ ] **LANGKAH 13** — Finalisasi 3 ground truth tambahan (115740/42/46)
-- [ ] **LANGKAH 14** — Laravel integration end-to-end (dry-run → live)
+- [x] LANGKAH 11 — Jalankan Gemini Vision batch pada dataset (`eval/results/gemini_*.json`)
+- [x] LANGKAH 12 — Integrasi ImprovedMatcher multi-strategi ke Phase 3/4 pipeline & interpreter
+- [x] LANGKAH 13 — Finalisasi 5 ground truth lengkap (115733, 115737, 115740, 115742, 115746 verified)
+- [x] LANGKAH 14 — Validasi E2E draft transaction & Laravel payload formatting (`tests/test_matching_and_pipeline.py`)
 
 ## 13. Pengujian (Testing)
 

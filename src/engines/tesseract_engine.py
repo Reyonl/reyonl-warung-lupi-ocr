@@ -173,18 +173,14 @@ class TesseractEngine(EngineInterface):
                     output_type=pytesseract.Output.DICT
                 )
 
-                full_text = pytesseract.image_to_string(
-                    gray_resized,
-                    lang=self.lang,
-                    config=cfg_str
-                )
-
                 regions = []
                 confs = []
+                words_found = []
                 for i in range(len(data["text"])):
                     text_val = data["text"][i].strip()
                     if not text_val:
                         continue
+                    words_found.append(text_val)
 
                     conf = float(data["conf"][i])
                     if conf < 0:
@@ -224,10 +220,14 @@ class TesseractEngine(EngineInterface):
                         status="ok",
                         model=f"tesseract-{cfg_name}",
                         confidence=avg_conf,
-                        raw_text=full_text,
+                        raw_text=" ".join(words_found),
                         regions=regions,
                         warnings=warning_msg,
                     )
+
+                    # If this config found sufficient regions, stop early to avoid redundant 4x passes
+                    if len(regions) >= 15 and avg_conf >= 0.20:
+                        break
 
             except Exception as e:
                 logger.warning(f"Tesseract config {cfg_name} failed: {e}")

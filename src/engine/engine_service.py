@@ -114,26 +114,38 @@ class EngineService:
         except Exception as e:
             logger.warning(f"Tesseract registration failed: {e}")
 
-        # Try Gemini Vision (if config has API key)
-        if config and config.engine.google_api_key:
+        # Try Gemini Vision (config or env)
+        google_api_key = (
+            config.engine.google_api_key if config and hasattr(config, "engine") else None
+        ) or os.environ.get("GOOGLE_API_KEY")
+        if google_api_key:
             try:
                 from src.engines.gemini_vision_engine import GeminiVisionEngine
+                gemini_model = (
+                    config.engine.gemini_model if config and hasattr(config, "engine") else None
+                ) or os.environ.get("GEMINI_VISION_MODEL", "gemini-3.5-flash")
                 gemini = GeminiVisionEngine(
-                    api_key=config.engine.google_api_key,
-                    model=config.engine.gemini_model
+                    api_key=google_api_key,
+                    model=gemini_model,
                 )
                 if gemini.is_available():
                     self.register_engine(gemini)
             except Exception as e:
                 logger.warning(f"Gemini Vision registration failed: {e}")
 
-        # Try Claude Vision (if config has API key)
-        if config and config.engine.anthropic_api_key:
+        # Try Claude Vision (config or env)
+        anthropic_api_key = (
+            config.engine.anthropic_api_key if config and hasattr(config, "engine") else None
+        ) or os.environ.get("ANTHROPIC_API_KEY")
+        if anthropic_api_key:
             try:
                 from src.engines.claude_vision_engine import ClaudeVisionEngine
+                claude_model = (
+                    config.engine.claude_model if config and hasattr(config, "engine") else None
+                ) or os.environ.get("CLAUDE_VISION_MODEL", "claude-3-5-sonnet-20241022")
                 claude = ClaudeVisionEngine(
-                    api_key=config.engine.anthropic_api_key,
-                    model=config.engine.claude_model
+                    api_key=anthropic_api_key,
+                    model=claude_model,
                 )
                 if claude.is_available():
                     self.register_engine(claude)

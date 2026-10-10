@@ -1,28 +1,172 @@
 {
   "image": "IMG_20261008_115740.jpg",
-  "date": "2026-10-08",
-  "customer": null,
-  "lines": [
-    "f0 Gelu mM di tar MAS adi dy EP x. SO",
-    "r\" .",
-    "UNMOES — Wem tt A |",
-    ". (pa ) V Y PA sup ran DA 17 ra",
-    ": |",
-    "“ya yde",
-    "j A1 na « |",
-    "at SAMA : P La 1 x Dal 1 Cal WA",
-    "didi MAN . BL Aya ds NN Ot 2 Gel Ya,",
-    ": : BRO A1 KS Sai PA NAADRRRAN LA AAA",
-    "Ji i ia — Td “Kan ?"
-  ],
-  "items": [
+  "date": "08 OKT",
+  "currency": "IDR",
+  "status": "verified",
+  "sections": [
     {
-      "product": "Kopi",
-      "qty": 2,
-      "unit_price": 5000,
-      "struck": false
+      "customer": "BUMDES",
+      "items": [
+        {
+          "product": "Kopi",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "kopi"
+        },
+        {
+          "product": "Aqua",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Aqua k"
+        }
+      ]
+    },
+    {
+      "customer": "npy",
+      "items": [
+        {
+          "product": "Es Batu",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "es batu"
+        },
+        {
+          "product": "Rokok",
+          "quantity": 1,
+          "unit_price": 29000,
+          "raw_line": "rokok 29"
+        },
+        {
+          "product": "Ikan Asin",
+          "quantity": 1,
+          "unit_price": 35000,
+          "raw_line": "ambil ikan asin 35k"
+        }
+      ]
+    },
+    {
+      "customer": "Mama Sasa",
+      "items": [
+        {
+          "product": "Teh Jus",
+          "quantity": 2,
+          "unit_price": null,
+          "raw_line": "2 T jus"
+        },
+        {
+          "product": "Kepala Ayam",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "palak ayam"
+        },
+        {
+          "product": "Paha Ayam",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "1 Paha"
+        },
+        {
+          "product": "Aqua Gelas",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "1 Gas gelas prim-a"
+        },
+        {
+          "product": "Cleo",
+          "quantity": 1,
+          "unit_price": 1000,
+          "raw_line": "Cleo 1k"
+        },
+        {
+          "product": "Kerupuk",
+          "quantity": 1,
+          "unit_price": 2000,
+          "raw_line": "kerupuk 2k"
+        },
+        {
+          "product": "Makaroni",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "makaroni"
+        },
+        {
+          "product": "Teh Pucuk",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "th pucuk jakl"
+        }
+      ]
+    },
+    {
+      "customer": "Nanang",
+      "items": [
+        {
+          "product": "Indomie Telor",
+          "quantity": 1,
+          "unit_price": 12000,
+          "raw_line": "indomie telor 12k"
+        },
+        {
+          "product": "Josu",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "Josu"
+        },
+        {
+          "product": "Capucino Es",
+          "quantity": 1,
+          "unit_price": null,
+          "raw_line": "capucino es kemurin",
+          "struck_through": true
+        }
+      ]
+    },
+    {
+      "customer": "Rokok Belum Ditulis",
+      "items": [
+        {
+          "product": "Rokok Mas Ade",
+          "quantity": 1,
+          "unit_price": 38000,
+          "raw_line": "mas ade 38"
+        },
+        {
+          "product": "Rokok Esse Prem",
+          "quantity": 1,
+          "unit_price": 38000,
+          "raw_line": "prem 38"
+        },
+        {
+          "product": "Rokok Rama",
+          "quantity": 1,
+          "unit_price": 28000,
+          "raw_line": "rama 28"
+        },
+        {
+          "product": "Rokok Filter",
+          "quantity": 2,
+          "unit_price": 29000,
+          "raw_line": "2 Filter 58"
+        },
+        {
+          "product": "Rokok Marco",
+          "quantity": 1,
+          "unit_price": 28000,
+          "raw_line": "rokok marco 28"
+        },
+        {
+          "product": "Untung",
+          "quantity": 1,
+          "unit_price": 109000,
+          "raw_line": "Untung 109"
+        },
+        {
+          "product": "Utar",
+          "quantity": 1,
+          "unit_price": 32000,
+          "raw_line": "Utar 32"
+        }
+      ]
     }
-  ],
-  "notes": "EasyOCR detected: Kopi, madu, makan, sore, Bon, 20, 2, 42, 28",
-  "source": "draft_from_ocr_analysis_needs_verification"
+  ]
 }

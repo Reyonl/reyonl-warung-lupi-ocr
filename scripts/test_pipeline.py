@@ -93,43 +93,15 @@ def run_pipeline(image_path: str, engine_name: str = "auto") -> dict:
 
     # Phase 1: OCR
     service = EngineService()
-    
-    if engine_name == "auto" or engine_name == "both":
-        # Try both, pick best
-        tess = TesseractEngine()
-        easy = EasyOCREngine()
-        if tess.is_available():
-            service.register_engine(tess)
-        if easy.is_available():
-            service.register_engine(easy)
-        
-        tess_result = service.process(image_path, engine="tesseract") if tess.is_available() else None
-        easy_result = service.process(image_path, engine="easyocr") if easy.is_available() else None
-        
-        if tess_result and easy_result:
-            # Pick the one with higher confidence
-            if easy_result.confidence > tess_result.confidence:
-                scan = easy_result
-                print(f"  OCR: EasyOCR (conf={scan.confidence:.3f}, regions={len(scan.regions)})")
-            else:
-                scan = tess_result
-                print(f"  OCR: Tesseract (conf={scan.confidence:.3f}, regions={len(scan.regions)})")
-        elif easy_result:
-            scan = easy_result
-            print(f"  OCR: EasyOCR (conf={scan.confidence:.3f}, regions={len(scan.regions)})")
-        elif tess_result:
-            scan = tess_result
-            print(f"  OCR: Tesseract (conf={scan.confidence:.3f}, regions={len(scan.regions)})")
-        else:
-            print("  ERROR: No OCR engine available")
-            return {"status": "error", "error": "No OCR engine available"}
-    else:
-        if engine_name == "tesseract":
-            service.register_engine(TesseractEngine())
-        elif engine_name == "easyocr":
-            service.register_engine(EasyOCREngine())
-        scan = service.process(image_path, engine=engine_name)
-        print(f"  OCR: {engine_name} (conf={scan.confidence:.3f}, regions={len(scan.regions)})")
+    try:
+        from src.config import OCRConfig
+        config = OCRConfig.load()
+        service.auto_register_default_engines(config)
+    except Exception as e:
+        service.auto_register_default_engines(None)
+
+    scan = service.process(image_path, engine=engine_name)
+    print(f"  OCR: {scan.model or engine_name} (conf={scan.confidence:.3f}, regions={len(scan.regions)})")
 
     if scan.status == "error":
         print(f"  ERROR: {scan.warnings}")
